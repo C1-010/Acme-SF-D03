@@ -1,0 +1,27 @@
+key,key:project,code,creation-moment,details,difficulty-level,update-moment,optional-link,total-time
+training-module-01,project-01,AAA-000,2019/07/23 10:30,This is a default detail,BASIC,2019/07/23 11:30,https://ev.us.es/webapps/login/,5
+training-module-02,project-01,ZZZ-999,2019/07/23 10:30,This is a default detail,BASIC,2019/07/23 11:30,https://ev.us.es/webapps/login/,5
+training-module-03,project-01,ABC-123,2019/07/23 10:30,This is a default detail,BASIC,2019/07/23 11:30,https://ev.us.es/webapps/login/,5
+training-module-04,project-02,BBB-111,2022/07/29 23:59,This is a default detail,BASIC,2022/07/30 00:00,https://ev.us.es/webapps/login/,5
+training-module-05,project-03,CCC-222,2022/07/29 23:00,This is a default detail,BASIC,2022/07/29 23:10,https://ev.us.es/webapps/login/,5
+training-module-06,project-04,DDD-444,2022/07/28 00:00,This is a default detail,BASIC,2022/07/28 00:10,https://ev.us.es/webapps/login/,5
+training-module-07,project-05,YYY-888,2022/06/28 00:00,This is a default detail,BASIC,2022/06/28 00:10,https://ev.us.es/webapps/login/,5
+training-module-08,project-06,XXX-777,2019/07/23 10:30,This is a detail with 100 characters aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,BASIC,2019/07/23 11:30,https://ev.us.es/webapps/login/,5
+training-module-09,project-07,WWW-666,2019/07/23 10:30,This is a detail with 99 characters aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,BASIC,2019/07/23 11:30,https://ev.us.es/webapps/login/,5
+training-module-10,project-08,EEE-555,2019/07/23 10:30,a,BASIC,2019/07/23 11:30,https://ev.us.es/webapps/login/,5
+training-module-11,project-09,ABC-001,2019/07/23 10:30,1,BASIC,2019/07/23 11:30,https://ev.us.es/webapps/login/,5
+training-module-12,project-10,ABC-002,2019/07/23 10:30,Aa,BASIC,2019/07/23 11:30,https://ev.us.es/webapps/login/,5
+training-module-13,project-11,ABC-003,2019/07/23 10:30,13,BASIC,2019/07/23 11:30,https://ev.us.es/webapps/login/,5
+training-module-14,project-12,ABC-004,2019/07/23 10:30,This is a default detail,INTERMEDIATE,2019/07/23 11:30,https://ev.us.es/webapps/login/,5
+training-module-15,project-13,ABC-005,2019/07/23 10:30,This is a default detail,ADVANCED,2019/07/23 11:30,https://ev.us.es/webapps/login/,5
+training-module-16,project-14,ABC-006,2019/07/23 10:30,This is a default detail,BASIC,2019/07/23 11:30,https://ev.us.es/webapps/login/,0
+training-module-17,project-15,ABC-007,2019/07/23 10:30,This is a default detail,BASIC,2019/07/23 11:30,https://ev.us.es/webapps/login/,1
+training-module-18,project-16,ABC-008,2019/07/23 10:30,This is a default detail,BASIC,2019/07/23 11:30,https://ev.us.es/webapps/login/,2
+training-module-19,project-17,ABC-009,2019/07/23 10:30,This is a default detail,BASIC,2019/07/23 11:30,https://ev.us.es/webapps/login/,3
+training-module-20,project-18,ABC-010,2019/07/23 10:30,This is a default detail,BASIC,2019/07/23 11:30,https://ev.us.es/webapps/login/,4
+training-module-21,project-19,ABC-011,2019/07/23 10:30,This is a default detail,BASIC,2019/07/23 11:30,https://ev.us.es/webapps/login/,5
+training-module-22,project-20,ABC-012,2019/07/23 10:30,This is a default detail,BASIC,2019/07/23 11:30,https://ev.us.es/webapps/login/,5
+training-module-23,project-02,ABC-013,2019/07/23 10:30,This is a default detail,BASIC,2019/07/23 11:30,https://ev.us.es/webapps/login/,5
+training-module-24,project-03,ABC-014,2019/07/23 10:30,This is a default detail,BASIC,2019/07/23 11:30,https://ev.us.es/webapps/login/,1000
+training-module-25,project-03,ABC-015,2019/07/23 10:30,This is a default detail,BASIC,2019/07/23 11:30,https://ev.us.es/webapps/login/,100
+training-module-26,project-04,ABC-016,2019/07/23 10:30,This is a default detail,BASIC,2019/07/23 11:30,https://ev.us.es/webapps/login/,10

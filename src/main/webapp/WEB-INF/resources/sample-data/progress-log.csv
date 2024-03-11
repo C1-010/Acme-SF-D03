@@ -1,0 +1,13 @@
+key,record-id,completeness,comment,registration-moment,responsible-person,key:contract
+progress-log-01,PG-A-1010,89.00,The contract is nearly complete,2014/12/11 23:00,John Smith,contract-01
+progress-log-02,PG-A-1011,95.50,Contract finalized - awaiting signatures,2014/12/12 10:30,Emily Johnson,contract-02
+progress-log-03,PG-A-1012,75.20,Reviewing contract terms and conditions,2014/12/13 14:45,Michael Brown,contract-03
+progress-log-04,PG-A-1013,100.00,Contract signed and archived,2014/12/14 09:15,Sarah Lee,contract-01
+progress-log-05,PG-A-1014,60.80,Negotiations ongoing - pending client feedback,2014/12/15 16:20,David Jones,contract-02
+progress-log-06,PG-A-1015,85.75,Finalizing amendments based on client requests,2014/12/16 11:05,Jessica Wang,contract-03
+progress-log-07,PG-A-1016,92.30,Preparing documentation for client review,2014/12/17 08:45,Luke Johnson,contract-01
+progress-log-08,PG-A-1017,78.90,Addressing legal concerns raised by the client,2014/12/18 12:30,Samantha White,contract-02
+progress-log-09,PG-A-1018,100.00,Contract signed and sent for client's records,2014/12/19 09:00,Oliver Brown,contract-03
+progress-log-10,PG-A-1019,85.20,Reviewing budget allocations for project milestones,2014/12/20 14:15,Isabella Davis,contract-04
+progress-log-11,PG-A-1020,97.80,Finalizing terms for additional services requested by the client,2014/12/21 10:20,Alexander Wilson,contract-05
+progress-log-12,PG-A-1021,88.50,Preparing project timeline adjustments based on client feedback,2014/12/22 16:30,Charlotte Miller,contract-06

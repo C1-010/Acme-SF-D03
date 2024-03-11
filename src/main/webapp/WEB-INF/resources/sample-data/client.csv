@@ -1,0 +1,3 @@
+key,key:userAccount,identification,company-name,type,email,optional-link
+client-01,user-account-client-01,CLI-1010,AcmeSF,company,Client1@acme.com,http://www.example.com
+client-02,user-account-client-02,CLI-1212,AcmeSF,individual,Client2@acme.com,http://www.example.com

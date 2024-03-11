@@ -1,0 +1,25 @@
+key,code,title,abstract-info,has-fatal-errors,cost,further-information-link,is-published,key:manager
+project-01,ABC-1234,Project Alpha,A brief overview of Project Alpha.,false,5000,http://www.projectalpha.com,true,manager-01
+project-02,AAA-0000,Project Alpha,A brief overview of Project Alpha.,false,5000,http://www.projectalpha.com,true,manager-01
+project-03,BBB-1111,Project Alpha,A brief overview of Project Alpha.,false,5000,http://www.projectalpha.com,true,manager-01
+project-04,YYY-8888,Project Alpha,A brief overview of Project Alpha.,false,5000,http://www.projectalpha.com,true,manager-01
+project-05,ZZZ-9999,Project Alpha,A brief overview of Project Alpha.,false,5000,http://www.projectalpha.com,true,manager-01
+project-06,ABC-1235,P,A brief overview of Project Alpha.,false,5000,http://www.projectalpha.com,true,manager-01
+project-07,ABC-1237,PA,A brief overview of Project Alpha.,false,5000,http://www.projectalpha.com,true,manager-01
+project-08,ABC-1238,Human Resource Management Systemmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm,A brief overview of Project Alpha.,false,5000,http://www.projectalpha.com,true,manager-01
+project-09,ABC-1239,Human Resource Management Systemmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm,A brief overview of Project Alpha.,false,5000,http://www.projectalpha.com,true,manager-01
+project-10,ABC-1240,Project Alpha,A,false,5000,http://www.projectalpha.com,true,manager-01
+project-11,ABC-1241,Project Alpha,Ab,false,5000,http://www.projectalpha.com,true,manager-01
+project-12,ABC-1242,Project Alpha,Mary had a little lamb its fleece was white as snow. The quick brown fox jumps over the slow doggy,false,5000,http://www.projectalpha.com,true,manager-01
+project-13,ABC-1243,Project Alpha,Mary had a little lamb its fleece was white as snow. The quick brown fox jumps over the slow doggy.,false,5000,http://www.projectalpha.com,true,manager-01
+project-14,ABC-1244,Project Alpha,A brief overview of Project Alpha.,true,5000,http://www.projectalpha.com,true,manager-01
+project-15,ABC-1245,Project Alpha,A brief overview of Project Alpha.,false,0,http://www.projectalpha.com,true,manager-01
+project-16,ABC-1246,Project Alpha,A brief overview of Project Alpha.,false,1,http://www.projectalpha.com,true,manager-01
+project-17,ABC-1247,Project Alpha,A brief overview of Project Alpha.,false,2147483646,http://www.projectalpha.com,true,manager-01
+project-18,ABC-1248,Project Alpha,A brief overview of Project Alpha.,false,2147483647,http://www.projectalpha.com,true,manager-01
+project-19,ABC-1249,Project Alpha,A brief overview of Project Alpha.,false,5000,,true,manager-01
+project-20,ABC-1250,Project Alpha,A brief overview of Project Alpha.,false,5000,http://a.b,true,manager-01
+project-21,ABC-1251,Project Alpha,A brief overview of Project Alpha.,false,5000,http://www.example.com/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,true,manager-01
+project-22,ABC-1252,Project Alpha,A brief overview of Project Alpha.,false,5000,http://www.example.com/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,true,manager-01
+project-23,ABC-1253,Project Alpha,A brief overview of Project Alpha.,false,5000,http://www.projectalpha.com,false,manager-01
+project-24,ABC-1254,Project Alpha,A brief overview of Project Alpha.,false,5000,http://www.projectalpha.com,true,manager-02

@@ -1,0 +1,29 @@
+# messages-en.i18n
+#
+# Copyright (C) 2012-2024 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+validation.contract.code	= El código debe seguir el patrón '[A-Z]{1,3}-[0-9]{3}'
+validation.progresslog.record-id = El código debe seguir el patrón 'PG-[A-Z]{1,2}-[0-9]{4}'
+validation.client.identification = El identificador del cliente debe seguir el patrón 'CLI-[0-9]{4}'
+validation.client.type = El tipo de cliente tiene que ser o 'company' o 'individual'
+validation.project.code = El código debe seguir el siguiente patrón: tres letras mayúsculas seguidas de un guión y cuatro dígitos numéricos.
+validation.trainingmodule.code = El código debe seguir el esquema [A-Z]{1,3}-[0-9]{3}
+validation.trainingsession.code = El código debe seguir el esquema TS-[A-Z]{1,3}-[0-9]{3}
+validation.claim.code = El código debe comenzar con 'C-' seguido de cuatro dígitos numéricos.
+validation.sponsorship.code = El código debe seguir el patrón '[A-Z]{1,3}-[0-9]{3}'
+validation.sponsorship.moment = El momento inicial debe ser en el pasado
+validation.invoice.code = El código debe seguir el patrón 'IN-[0-9]{4}-[0-9]{4}'
+validation.invoice.registration-time = La fecha de registro debe ser en el pasado
+validation.notice.instantiation-moment = El momento de instaciación debe ser en el pasado
+validation.codeaudits.code = El código debe seguir el patrón '[A-Z]{1,3}-[0-9]{3}'
+validation.codeaudits.type = El tipo de auditoría de código debe ser 'estático' o 'dinámico'
+validation.auditrecords.code = El código debe seguir el patrón 'AU-[0-9]{4}-[0-9]{3}'
+validation.codeaudits.execution-date = La fecha de ejecución debe ser en el pasado.
+validation.auditrecords.start-period = El periodo de inicio debe ser anterior al de finalización
+validation.auditrecords.end-period = El período de finalización debe ser posterior al período de inicio.

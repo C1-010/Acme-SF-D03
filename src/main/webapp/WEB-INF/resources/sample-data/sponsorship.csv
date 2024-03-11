@@ -1,0 +1,21 @@
+key,code,moment,start-duration,end-duration,amount,type,email,link,key:project,key:sponsor
+sponsorship-01,ABC-123,2018/08/15 10:30,2018/08/20 10:30,2018/11/15 10:30,EUR 1500.50,Financial,mysponsorship@email.com,http://www.sponsorshipopportunity.com,project-01,sponsor-01
+sponsorship-02,XYZ-456,2019/02/20 14:45,2019/02/25 14:45,2019/05/20 14:45,USD 2000.75,Financial,productsponsor@email.com,http://www.productsponsorship.com,project-02,sponsor-02
+sponsorship-03,MNO-789,2019/06/10 09:15,2019/06/15 09:15,2019/09/10 09:15,EUR 1800.00,Financial,eventsponsor@email.com,http://www.eventsponsorship.com,project-03,sponsor-01
+sponsorship-04,PQR-321,2019/10/05 16:30,2019/10/10 16:30,2020/01/05 16:30,USD 2500.25,Inkind,inksponsor@email.com,http://www.inksponsorship.com,project-04,sponsor-01
+sponsorship-05,DEF-654,2020/03/15 11:00,2020/03/20 11:00,2020/06/15 11:00,EUR 1700.50,Financial,techsponsor@email.com,http://www.techsponsorship.com,project-05,sponsor-01
+sponsorship-06,GHI-987,2020/08/20 14:30,2020/08/25 14:30,2020/11/20 14:30,USD 3000.00,Financial,communitysponsor@email.com,http://www.communitysponsorship.com,project-06,sponsor-02
+sponsorship-07,JKL-246,2021/01/12 08:45,2021/01/17 08:45,2021/04/12 08:45,EUR 2200.75,Financial,educationsponsor@email.com,http://www.educationsponsorship.com,project-07,sponsor-02
+sponsorship-08,VWX-789,2021/05/28 13:15,2021/06/02 13:15,2021/08/28 13:15,USD 2800.25,Financial,healthcaresponsor@email.com,http://www.healthcaresponsorship.com,project-08,sponsor-02
+sponsorship-09,YZA-123,2021/09/18 17:30,2021/09/23 17:30,2021/12/18 17:30,EUR 1900.50,Financial,sustainabilitysponsor@email.com,http://www.sustainabilitysponsorship.com,project-09,sponsor-01
+sponsorship-10,QWE-456,2022/02/05 10:00,2022/02/10 10:00,2022/05/05 10:00,USD 3200.00,Inkind,mediasponsor@email.com,http://www.mediasponsorship.com,project-10,sponsor-01
+sponsorship-11,ZXC-789,2022/06/22 14:45,2022/06/27 14:45,2022/09/22 14:45,EUR 2600.75,Financial,artssponsor@email.com,http://www.artssponsorship.com,project-11,sponsor-01
+sponsorship-12,LKJ-321,2021/10/15 09:15,2021/10/20 09:15,2023/01/15 09:15,USD 3500.25,Inkind,charitysponsor@email.com,http://www.charitysponsorship.com,project-12,sponsor-02
+sponsorship-13,BNM-654,2020/03/28 16:30,2020/04/02 16:30,2023/07/28 16:30,EUR 2800.50,Financial,researchsponsor@email.com,http://www.researchsponsorship.com,project-13,sponsor-02
+sponsorship-14,OPI-987,2020/08/10 11:00,2020/08/15 11:00,2023/11/10 11:00,USD 3800.00,Financial,fashionsponsor@email.com,http://www.fashionsponsorship.com,project-14,sponsor-01
+sponsorship-15,RQW-246,2021/01/05 14:30,2021/01/10 14:30,2022/04/05 14:30,EUR 3000.75,Inkind,travelsponsor@email.com,http://www.travelsponsorship.com,project-15,sponsor-02
+sponsorship-16,TYU-789,2019/05/22 08:45,2019/05/27 08:45,2020/08/22 08:45,USD 4200.25,Inkind,foodsponsor@email.com,http://www.foodsponsorship.com,project-16,sponsor-01
+sponsorship-17,UIO-123,2020/09/12 13:15,2020/09/17 13:15,2020/12/12 13:15,EUR 3200.50,Inkind,environmentsponsor@email.com,http://www.environmentsponsorship.com,project-17,sponsor-01
+sponsorship-18,PAS-456,2020/02/28 17:30,2020/03/05 17:30,2021/06/28 17:30,USD 4600.00,Inkind,youthsponsor@email.com,http://www.youthsponsorship.com,project-18,sponsor-01
+sponsorship-19,QWE-789,2020/06/15 09:15,2020/06/20 09:15,2021/09/15 09:15,EUR 3400.75,Financial,technologysponsor@email.com,http://www.technologysponsorship.com,project-19,sponsor-02
+sponsorship-20,ZXC-123,2020/11/02 14:45,2020/11/07 14:45,2022/02/02 14:45,USD 5000.25,Financial,healthsponsor@email.com,http://www.healthsponsorship.com,project-20,sponsor-01

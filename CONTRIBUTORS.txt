@@ -1,0 +1,15 @@
+# CONTRIBUTORS.txt
+#
+# Copyright (C) 2012-2024 DP2-C1.010
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+- Alejandro Sevillano Barea (alesevbar@alum.us.es)
+- Andrés Francisco Garcia Rivero (andgarriv@alum.us.es)
+- Antonio José López Cubiles (antlopcub@alum.us.es)
+- Javier Nieto Vicioso (javnievic@alum.us.es)
+- Pablo Díaz Ordoñez (pabdiaord@alum.us.es)
