@@ -1,5 +1,5 @@
 
-package acme.entities.invoices;
+package acme.entities.sponsorships;
 
 import java.util.Date;
 
@@ -22,7 +22,6 @@ import org.hibernate.validator.constraints.URL;
 
 import acme.client.data.AbstractEntity;
 import acme.client.data.datatypes.Money;
-import acme.entities.sponsorships.Sponsorship;
 import lombok.Getter;
 import lombok.Setter;
 

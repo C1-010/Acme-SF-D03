@@ -5,7 +5,7 @@
  *
  */
 
-package acme.entities.claims;
+package acme.entities.group;
 
 import java.util.Date;
 

@@ -5,7 +5,7 @@
  *
  */
 
-package acme.entities.userStories;
+package acme.entities.projects;
 
 public enum Priority {
 

@@ -13,7 +13,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 import acme.client.data.AbstractEntity;
-import acme.entities.userStories.UserStory;
 import lombok.Getter;
 import lombok.Setter;
 
