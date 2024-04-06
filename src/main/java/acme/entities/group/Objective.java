@@ -1,5 +1,5 @@
 
-package acme.entities.objectives;
+package acme.entities.group;
 
 import java.beans.Transient;
 import java.util.Date;

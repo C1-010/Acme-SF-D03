@@ -1,12 +1,11 @@
 
-package acme.entities.notices;
+package acme.entities.group;
 
 import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
@@ -21,7 +20,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Notice extends AbstractEntity {
+public class Banner extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
 
@@ -30,31 +29,29 @@ public class Notice extends AbstractEntity {
 	// Attributes -------------------------------------------------------------
 
 	@Temporal(TemporalType.TIMESTAMP)
-	@Past(message = "{validation.notice.instantiation-moment}")
+	@Past
 	@NotNull
 	private Date				instantiationMoment;
 
+	//Must start at any moment after the instantiation/update moment and must last for at least one week
+	@Temporal(TemporalType.TIMESTAMP)
+	@NotNull
+	private Date				startPeriod;
+
+	@Temporal(TemporalType.TIMESTAMP)
+	@NotNull
+	private Date				endPeriod;
+
+	//Must be stored somewhere else
+	@URL
+	private String				picture;
+
 	@NotBlank
 	@Length(max = 75)
-	private String				title;
+	private String				slogan;
 
-	//computed as: 〈username〉 - 〈surname, name〉
-	@NotBlank
-	@Length(max = 75)
-	private String				author;
-
-	@NotBlank
-	@Length(max = 100)
-	private String				message;
-
-	@Email
-	private String				emailAddress;
-
+	//Link to a target web document
 	@URL
 	private String				link;
-
-	// Derived Attributes -------------------------------------------------------------
-
-	// Relationships -------------------------------------------------------------
 
 }

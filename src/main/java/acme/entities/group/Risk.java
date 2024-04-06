@@ -1,29 +1,34 @@
 
-package acme.entities.trainingSessions;
+package acme.entities.group;
 
 import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.persistence.Transient;
 import javax.validation.Valid;
-import javax.validation.constraints.Email;
+import javax.validation.constraints.Digits;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
 import acme.client.data.AbstractEntity;
-import acme.entities.trainingModules.TrainingModule;
+import acme.client.data.accounts.Administrator;
+import acme.entities.projects.Project;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
-public class TrainingSession extends AbstractEntity {
+public class Risk extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
 
@@ -33,35 +38,52 @@ public class TrainingSession extends AbstractEntity {
 
 	@NotBlank
 	@Column(unique = true)
-	@Pattern(regexp = "^TS-[A-Z]{1,3}-[0-9]{3}$", message = "{validation.trainingsession.code}")
-	private String				code;
-
-	private Date				startPeriod;
-
-	private Date				endPeriod;
-
-	@NotBlank
-	@Length(max = 75)
-	private String				location;
-
-	@NotBlank
-	@Length(max = 75)
-	private String				instructor;
+	@Pattern(regexp = "^R-[0-9]{3}$")
+	private String				reference;
 
 	@NotNull
-	@Email
-	private String				contactEmail;
+	@Past
+	private Date				identificationDate;
+
+	@NotNull
+	@Min(0)
+	private double				impact;
+
+	@NotNull
+	@Digits(integer = 3, fraction = 2)
+	@Max(100)
+	private double				probability;
+
+	@NotBlank
+	@Length(max = 100)
+	private String				description;
 
 	@URL
 	private String				optionalLink;
 
 	// Derived attributes -----------------------------------------------------
 
+
+	@Transient
+	public Double value() {
+		Double result;
+
+		result = this.impact * this.probability;
+
+		return result;
+	}
+
 	// Relationships ----------------------------------------------------------
+
 
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
-	private TrainingModule		trainingModule;
+	private Project			project;
+
+	@NotNull
+	@Valid
+	@ManyToOne(optional = false)
+	private Administrator	administrator;
 
 }
