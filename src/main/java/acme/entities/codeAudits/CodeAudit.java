@@ -40,11 +40,10 @@ public class CodeAudit extends AbstractEntity {
 	private String				code;
 
 	@Temporal(TemporalType.DATE)
-	@Past(message = "{validation.codeAudits.execution-date")
+	@Past
 	@NotNull
 	private Date				executionDate;
 
-	@Pattern(regexp = "^(Static|Dynamic)$", message = "{validation.codeAudits.type}")
 	@NotNull
 	private CodeAuditType		type;
 
@@ -54,10 +53,11 @@ public class CodeAudit extends AbstractEntity {
 
 	//computed as the mode of the marks in the corresponding auditing records;
 	//ties must be broken arbitrarily if necessary.
-
-	private Double				mark;
+	@NotNull
+	private Mark				mark;
 
 	@URL
+	@Length(max = 255)
 	private String				optionalLink;
 
 	// Derived attributes -----------------------------------------------------

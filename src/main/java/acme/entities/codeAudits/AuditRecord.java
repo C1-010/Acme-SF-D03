@@ -14,6 +14,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
 
+import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
 import acme.client.data.AbstractEntity;
@@ -32,22 +33,24 @@ public class AuditRecord extends AbstractEntity {
 	@Column(unique = true)
 	@Pattern(regexp = "^AU-[0-9]{4}-[0-9]{3}$", message = "{validation.auditrecords.code}")
 	@NotBlank
-	private String				code;
+	private String				codeAudit;
 
 	//at least one hour long
 	@Temporal(TemporalType.TIMESTAMP)
-	@Past(message = "{validation.auditrecords.start-period}")
+	@Past
 	@NotNull
 	private Date				startPeriod;
 
 	@Temporal(TemporalType.TIMESTAMP)
-	@Past(message = "{validation.auditrecords.end-period}")
+	@Past
 	@NotNull
 	private Date				endPeriod;
 
-	private Double				mark;
+	@NotNull
+	private Mark				mark;
 
 	@URL
+	@Length(max = 255)
 	private String				furtherInformationLink;
 
 	// Derived attributes -----------------------------------------------------
