@@ -9,6 +9,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -19,6 +20,7 @@ import org.hibernate.validator.constraints.Length;
 
 import acme.client.data.AbstractEntity;
 import acme.client.data.datatypes.Money;
+import acme.client.helpers.MomentHelper;
 import acme.entities.projects.Project;
 import acme.roles.Client;
 import lombok.Getter;
@@ -61,19 +63,29 @@ public class Contract extends AbstractEntity {
 	@NotNull
 	private Money				budget;
 
+	private boolean				draftMode;
+
 	// Derived attributes -----------------------------------------------------
 
+
+	@Transient
+	public boolean isAvailable() {
+		// Check if the contract is not in draft mode and if the instantiation moment is in the past or present
+		return !this.draftMode && MomentHelper.isPresentOrPast(this.instantiationMoment);
+	}
+
 	// Relationships ----------------------------------------------------------
+
 
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
 	@OneToMany()
-	private Project				project;
+	private Project	project;
 
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
-	private Client				client;
+	private Client	client;
 
 }
