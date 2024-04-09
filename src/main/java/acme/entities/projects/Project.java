@@ -49,10 +49,10 @@ public class Project extends AbstractEntity {
 	@Length(max = 100)
 	private String				abstractInfo;
 
-	private boolean				hasFatalErrors;
+	private boolean				fatalErrors;
 
 	@PositiveOrZero
-	@Max(100)
+	@Max(10000)
 	private int					cost;
 
 	@URL
