@@ -1,4 +1,4 @@
-key,code,title,abstract-info,fatal-errors,cost,further-information-link,published,key:manager
+key,code,title,abstract-info,fatal-errors,cost,further-information-link,draft_mode,key:manager
 project-01,ABC-1234,Lorem ipsum,Lorem ipsum dolor sit amet,false,5000,http://www.website.com,true,manager-01
 project-02,AAA-0000,Lorem ipsum,Lorem ipsum dolor sit amet,false,5000,http://www.website.com,true,manager-01
 project-03,BBB-1111,Lorem ipsum,Lorem ipsum dolor sit amet,false,5000,http://www.website.com,true,manager-01

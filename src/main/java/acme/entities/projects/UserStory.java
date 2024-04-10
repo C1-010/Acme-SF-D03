@@ -57,7 +57,7 @@ public class UserStory extends AbstractEntity {
 	@Length(max = 255)
 	private String				furtherInformationLink;
 
-	private boolean				published;
+	private boolean				draftMode;
 
 	// Relationships ----------------------------------------------------------
 
