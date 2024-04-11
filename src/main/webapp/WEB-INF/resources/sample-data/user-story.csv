@@ -1,4 +1,4 @@
-key,title,description,estimatedCost,acceptanceCriteria,priority,furtherInformationLink,published,key:manager
+key,title,description,estimatedCost,acceptanceCriteria,priority,furtherInformationLink,draft_mode,key:manager
 user-story-01,Lorem ipsum,Lorem ipsum dolor sit amet,5000,Lorem ipsum dolor sit amet,MUST,http://www.website.com,true,manager-01
 user-story-02,L,Lorem ipsum dolor sit amet,5000,Lorem ipsum dolor sit amet,MUST,http://www.website.com,true,manager-01
 user-story-03,Lo,Lorem ipsum dolor sit amet,5000,Lorem ipsum dolor sit amet,MUST,http://www.website.com,true,manager-01
