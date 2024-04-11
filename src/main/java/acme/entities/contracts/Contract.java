@@ -6,7 +6,6 @@ import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
@@ -80,7 +79,6 @@ public class Contract extends AbstractEntity {
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
-	@OneToMany()
 	private Project	project;
 
 	@NotNull
