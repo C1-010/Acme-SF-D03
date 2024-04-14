@@ -6,8 +6,11 @@ invoice-04,IN-9999-9998,2020/07/29 18:30,2020/09/29 18:30,EUR 1000.50,0.12,http:
 invoice-05,IN-9999-9999,2020/07/29 18:30,2020/09/29 18:30,EUR 1000.50,0.12,http://www.invoice01.com,sponsorship-01
 invoice-06,IN-1234-5679,2000/01/01 00:00,2020/09/29 18:30,EUR 1000.50,0.12,http://www.invoice01.com,sponsorship-01
 invoice-07,IN-1234-5698,2000/01/01 00:01,2020/09/29 18:30,EUR 1000.50,0.12,http://www.invoice01.com,sponsorship-01
-invoice-08,IN-1234-5688,2022/07/29 23:58,2200/12/31 23:58,EUR 1000.50,0.12,http://www.invoice01.com,sponsorship-01
-invoice-09,IN-1234-5668,2022/07/29 23:59,2200/12/31 23:59,EUR 1000.50,0.12,http://www.invoice01.com,sponsorship-01
+invoice-08,IN-1234-5688,2022/07/29 23:59,2022/12/31 23:58,EUR 1000.50,0.12,http://www.invoice01.com,sponsorship-01
+invoice-09,IN-1234-5668,2022/07/30 00:00,2022/12/31 23:59,EUR 1000.50,0.12,http://www.invoice01.com,sponsorship-01
+invoice-09-01,IN-9191-5678,2020/07/29 18:30,2020/08/29 18:30,EUR 1000.50,0.12,http://www.invoice01.com,sponsorship-01
+invoice-09-02,IN-9892-5678,2020/07/29 18:30,2020/08/29 18:31,EUR 1000.50,0.12,http://www.invoice01.com,sponsorship-01
+invoice-09-03,IN-9892-1111,2020/07/29 18:30,2200/01/29 18:31,EUR 1000.50,0.12,http://www.invoice01.com,sponsorship-01
 invoice-10,IN-0234-5678,2020/07/29 18:30,2020/09/29 18:30,EUR 0.00,0.12,http://www.invoice01.com,sponsorship-01
 invoice-11,IN-2234-5678,2020/07/29 18:30,2020/09/29 18:30,EUR 0.01,0.12,http://www.invoice01.com,sponsorship-01
 invoice-12,IN-3234-5678,2020/07/29 18:30,2020/09/29 18:30,EUR 999999.99,0.12,http://www.invoice01.com,sponsorship-01
@@ -21,4 +24,6 @@ invoice-19,IN-1034-5678,2020/07/29 18:30,2020/09/29 18:30,EUR 1000.50,0.12,,spon
 invoice-20,IN-1134-5678,2020/07/29 18:30,2020/09/29 18:30,EUR 1000.50,0.12,http://a.b,sponsorship-01
 invoice-21,IN-1334-5678,2020/07/29 18:30,2020/09/29 18:30,EUR 1000.50,0.12,http://www.example.com/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,sponsorship-01
 invoice-22,IN-1434-5678,2020/07/29 18:30,2020/09/29 18:30,EUR 1000.50,0.12,http://www.example.com/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,sponsorship-01
-invoice-23,IN-1534-5678,2020/07/29 18:30,2020/09/29 18:30,EUR 1000.50,0.12,http://www.invoice01.com,sponsorship-02
+invoice-23,IN-9593-5678,2020/07/29 18:30,2020/09/29 18:30,EUR 1000.50,0.12,http://website.com/recursos,sponsorship-01
+invoice-24,IN-4444-5678,2020/07/29 18:30,2020/09/29 18:30,EUR 1000.50,0.12,http://website.com?active=true,sponsorship-01
+invoice-25,IN-1534-5678,2020/07/29 18:30,2020/09/29 18:30,EUR 1000.50,0.12,http://www.invoice01.com,sponsorship-02
