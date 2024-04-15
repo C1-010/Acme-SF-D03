@@ -73,4 +73,5 @@ public class CodeAudit extends AbstractEntity {
 	@Valid
 	@ManyToOne(optional = false)
 	private Auditor				auditor;
+
 }
