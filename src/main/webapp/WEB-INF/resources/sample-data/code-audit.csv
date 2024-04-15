@@ -1,0 +1,17 @@
+key,code,executionDate,type,correctiveActions,mark,optionalLink
+auditrecord-01,C01,2000/01/01 00:00,Static,Lorem ipsum dolor sit amet,A_Plus,https://www.example.com/new-feature
+auditrecord-02,C02,2000/01/01 00:01,Dynamic,Lorem ipsum dolor sit amet,A,https://www.example.com/new-feature
+auditrecord-03,C03,2021/02/29 20:00,Dynamic,Lorem ipsum dolor sit amet,B,https://www.example.com/new-feature
+auditrecord-04,C04,2022/07/30 00:00,Static,Lorem ipsum dolor sit amet,C,https://www.example.com/new-feature
+auditrecord-05,C05,2022/07/29 23:59,Dynamic,Lorem ipsum dolor sit amet,F_Minus,https://www.example.com/new-feature
+auditrecord-06,C06,2021/03/28 08:15,Static,L,F,https://www.example.com/new-feature
+auditrecord-07,C07,2021/03/28 08:15,Dynamic,Lorem ipsum dolor sit amet consectetur adipiscing elit. Ut quis lobortis neque. Nulla augue mi amet.,F_Minus,https://www.example.com/new-feature
+auditrecord-08,C08,2021/03/28 08:15,Static,Lorem ipsum dolor sit amet consectetur adipiscing elit. Ut quis lobortis neque. Nulla augue mi amet,F_Minus,https://www.example.com/new-feature
+auditrecord-09,C09,2021/03/28 08:15,Static,أبجد هوز دولور الجلوس امات,B,https://www.example.com/new-feature
+auditrecord-10,C10,2021/03/28 08:15,Dynamic,<h1>hacked</h1>,B,https://www.example.com/new-feature
+auditrecord-11,C11,2021/03/28 08:15,Static,'or 'A'='A,A,https://www.example.com/new-feature
+auditrecord-13,C12,2021/03/28 08:15,Dynamic,Lorem ipsum dolor sit amet,C,https://www.example.com/new-featureeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+auditrecord-14,C13,2021/03/28 08:15,Static,Lorem ipsum dolor sit amet,A,https://www.example.com/new-featureeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+auditrecord-15,C14,2021/03/28 08:15,Dynamic,Lorem ipsum dolor sit amet,A_Plus,
+auditrecord-16,C15,2021/03/28 08:15,Static,Lorem ipsum dolor sit amet,C,http://a.b
+auditrecord-17,C17,2021/03/28 08:15,Static,Lorem ipsum dolor sit amet,C,http://website.com?active=true
