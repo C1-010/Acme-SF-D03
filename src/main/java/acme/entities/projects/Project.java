@@ -11,6 +11,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.validation.Valid;
+import javax.validation.constraints.Max;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
@@ -48,16 +49,17 @@ public class Project extends AbstractEntity {
 	@Length(max = 100)
 	private String				abstractInfo;
 
-	private boolean				hasFatalErrors;
+	private boolean				fatalErrors;
 
 	@PositiveOrZero
+	@Max(10000)
 	private int					cost;
 
 	@URL
 	@Length(max = 255)
 	private String				furtherInformationLink;
 
-	private boolean				isPublished;
+	private boolean				draftMode;
 
 	// Relationships ----------------------------------------------------------
 
