@@ -10,7 +10,8 @@
 
 #Títulos de las listas ##########################################################
 
-client.contract.list.title= Lista de contratos
+client.contract.list.title = Lista de contratos
+client.contract.form.title = Formulario de contrato
 
 #Etiquetas de las listas ##########################################################
 
@@ -19,6 +20,16 @@ client.contract.list.label.instantiationMoment = Momento de instanciación
 client.contract.list.label.providerName = Nombre del proveedor
 client.contract.list.label.customerName = Nombre del cliente
 
-#List buttons ##########################################################
+#Botones de las listas ##########################################################
 
-employer.job.list.button.create = Crear
+client.contract.list.button.create = Crear
+
+#Etiquetas de los formularios ##########################################################
+
+client.contract.form.label.code = Código:
+client.contract.form.label.project = Projecto:
+client.contract.form.label.instantiationMoment = Momento de instanciación:
+client.contract.form.label.providerName = Nombre del proveedor:
+client.contract.form.label.customerName =  Nombre del cliente:
+client.contract.form.label.goals = Objetivos:
+client.contract.form.label.budget = Presupuesto: 

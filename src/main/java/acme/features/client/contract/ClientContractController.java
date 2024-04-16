@@ -13,12 +13,21 @@ import acme.roles.Client;
 @Controller
 public class ClientContractController extends AbstractController<Client, Contract> {
 
+	// Internal state ---------------------------------------------------------
+
 	@Autowired
-	private ClientContractListMineService listMineService;
+	private ClientContractListMineService	listMineService;
+
+	@Autowired
+	private ClientContractShowService		showService;
+
+	// Constructors -----------------------------------------------------------
 
 
 	@PostConstruct
 	protected void initialise() {
+		super.addBasicCommand("show", this.showService);
+
 		super.addCustomCommand("list-mine", "list", this.listMineService);
 
 	}

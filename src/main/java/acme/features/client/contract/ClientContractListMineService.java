@@ -15,8 +15,12 @@ import acme.roles.Client;
 @Service
 public class ClientContractListMineService extends AbstractService<Client, Contract> {
 
+	// Internal state ---------------------------------------------------------
+
 	@Autowired
 	private ClientContractRepository repository;
+
+	// AbstractService interface ----------------------------------------------
 
 
 	@Override

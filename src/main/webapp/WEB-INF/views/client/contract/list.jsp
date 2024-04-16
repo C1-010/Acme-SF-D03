@@ -23,7 +23,7 @@
 </acme:list>
 
 <jstl:if test="${_command == 'list-mine'}">
-	<acme:button code="employer.job.list.button.create" action="/client/contract/create"/>
+	<acme:button code="client.contract.list.button.create" action="/client/contract/create"/>
 </jstl:if>		
 	
 
