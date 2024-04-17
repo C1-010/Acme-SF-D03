@@ -16,7 +16,10 @@ public class ClientProgressLogController extends AbstractController<Client, Prog
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	ClientProgressLogListService listService;
+	ClientProgressLogListService	listService;
+
+	@Autowired
+	ClientProgressLogShowService	showService;
 
 	// Constructors -----------------------------------------------------------
 
@@ -24,5 +27,6 @@ public class ClientProgressLogController extends AbstractController<Client, Prog
 	@PostConstruct
 	protected void initialise() {
 		super.addBasicCommand("list", this.listService);
+		super.addBasicCommand("show", this.showService);
 	}
 }

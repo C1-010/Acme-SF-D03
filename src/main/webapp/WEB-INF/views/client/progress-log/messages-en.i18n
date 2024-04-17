@@ -11,7 +11,8 @@
 
 #List titles ##########################################################
 
-client.progress-log.list.title = Listing Progress Logs
+client.progress-log.list.title = Listing of progress logs
+client.progress-log.form.title = Progress log form
 
 #List labels ##########################################################
 
@@ -24,6 +25,11 @@ client.progress-log.list.label.comment = Comment
 
 #Form labels ##########################################################
 
+client.progress-log.form.label.recordId = Record id: 
+client.progress-log.form.label.completeness = Completeness:
+client.progress-log.form.label.comment = Comment:
+client.progress-log.form.label.registrationMoment = Registration moment:
+client.progress-log.form.label.responsiblePerson = Responsible person:
 
 
 #Form buttons ##########################################################
@@ -32,7 +38,7 @@ client.progress-log.list.label.comment = Comment
 
 #Form placeholders ##########################################################
 
-
+client.progress-log.form.placeholder.recordId = PG-[A-Z]{1,2}-[0-9]{4}
 
 #Form errors ##########################################################
 
