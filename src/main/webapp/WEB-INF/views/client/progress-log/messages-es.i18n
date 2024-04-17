@@ -21,6 +21,7 @@ client.progress-log.list.label.comment =  Comentarios
 
 #Botones de las listas ##########################################################
 
+client.progress-log.list.button.create = Crear
 
 #Etiquetas de los formularios ##########################################################
 
@@ -32,6 +33,9 @@ client.progress-log.form.label.responsiblePerson = Persona responsable:
 
 #Botones de los formularios ##########################################################
 
+client.progress-log.form.button.update = Actualizar
+client.progress-log.form.button.delete = Borrar
+client.progress-log.form.button.create = Crear
 
 #Placeholders de los formularios ##########################################################
 
@@ -39,3 +43,4 @@ client.progress-log.form.placeholder.recordId = PG-[A-Z]{1,2}-[0-9]{4}
 
 #Errores de los formularios ##########################################################
 
+client.progress-log.form.error.duplicated = Este recordId ya está cogido

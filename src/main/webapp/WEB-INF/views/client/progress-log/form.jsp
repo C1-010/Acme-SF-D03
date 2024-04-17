@@ -21,22 +21,15 @@
 	<acme:input-textarea code="client.progress-log.form.label.comment" path="comment"/>	
 	<acme:input-moment code="client.progress-log.form.label.registrationMoment" path="registrationMoment"/>
 	<acme:input-textbox code="client.progress-log.form.label.responsiblePerson" path="responsiblePerson"/>
-
 	
-	<%--
 	<jstl:choose>	 
-		<jstl:when test="${_command == 'show' && draftMode == false}">
-			<acme:button code="client.contract.form.button.progress-logs" action="/client/progress-log/list?masterId=${id}"/>			
-		</jstl:when>
-		<jstl:when test="${acme:anyOf(_command, 'show|update|delete|publish') && draftMode == true}">
-			<acme:button code="client.contract.form.button.progress-logs" action="/client/progress-log/list?masterId=${id}"/>
-			<acme:submit code="client.contract.form.button.update" action="/client/contract/update"/>
-			<acme:submit code="client.contract.form.button.delete" action="/client/contract/delete"/>
-			<acme:submit code="client.contract.form.button.publish" action="/client/contract/publish"/>
+		<jstl:when test="${acme:anyOf(_command, 'show|update|delete') && draftMode == true}">
+			<acme:submit code="client.progress-log.form.button.update" action="/client/progress-log/update"/>
+			<acme:submit code="client.progress-log.form.button.delete" action="/client/progress-log/delete"/>
 		</jstl:when>
 		<jstl:when test="${_command == 'create'}">
-			<acme:submit code="client.contract.form.button.create" action="/client/contract/create"/>
+			<acme:submit code="client.progress-log.form.button.create" action="/client/progress-log/create?masterId=${masterId}"/>
 		</jstl:when>		
 	</jstl:choose>
-	--%>
+	
 </acme:form>

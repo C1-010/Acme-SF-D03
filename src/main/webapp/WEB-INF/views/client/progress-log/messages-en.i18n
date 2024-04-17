@@ -22,6 +22,7 @@ client.progress-log.list.label.comment = Comment
 
 #List buttons ##########################################################
 
+client.progress-log.list.button.create = Create
 
 #Form labels ##########################################################
 
@@ -34,7 +35,9 @@ client.progress-log.form.label.responsiblePerson = Responsible person:
 
 #Form buttons ##########################################################
 
-
+client.progress-log.form.button.update = Update
+client.progress-log.form.button.delete = Delete
+client.progress-log.form.button.create = Create
 
 #Form placeholders ##########################################################
 
@@ -42,3 +45,4 @@ client.progress-log.form.placeholder.recordId = PG-[A-Z]{1,2}-[0-9]{4}
 
 #Form errors ##########################################################
 
+client.progress-log.form.error.duplicated = This recordId is taken
