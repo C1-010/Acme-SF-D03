@@ -33,3 +33,19 @@ client.contract.form.label.providerName = Nombre del proveedor:
 client.contract.form.label.customerName =  Nombre del cliente:
 client.contract.form.label.goals = Objetivos:
 client.contract.form.label.budget = Presupuesto: 
+
+#Botones de los formularios ##########################################################
+
+client.contract.form.button.progress-logs = Registros de progreso
+client.contract.form.button.update = Actualizar
+client.contract.form.button.delete = Borrar
+client.contract.form.button.publish = Publicar
+client.contract.form.button.create = Crear
+
+#Placeholders de los formularios ##########################################################
+
+client.contract.form.placeholder.code = [A-Z]{1,3}-[0-9]{3}
+
+#Errores de los formularios ##########################################################
+
+client.contract.form.error.duplicated = Este código ya está cogido

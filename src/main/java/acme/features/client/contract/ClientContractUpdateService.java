@@ -14,7 +14,7 @@ import acme.entities.projects.Project;
 import acme.roles.Client;
 
 @Service
-public class ClientContractShowService extends AbstractService<Client, Contract> {
+public class ClientContractUpdateService extends AbstractService<Client, Contract> {
 
 	// Internal state ---------------------------------------------------------
 
@@ -34,10 +34,9 @@ public class ClientContractShowService extends AbstractService<Client, Contract>
 		masterId = super.getRequest().getData("id", int.class);
 		contract = this.repository.findOneContractById(masterId);
 		client = contract == null ? null : contract.getClient();
-		status = super.getRequest().getPrincipal().hasRole(client) || contract != null && !contract.isDraftMode();
+		status = contract != null && contract.isDraftMode() && super.getRequest().getPrincipal().hasRole(client);
 
 		super.getResponse().setAuthorised(status);
-
 	}
 
 	@Override
@@ -52,21 +51,49 @@ public class ClientContractShowService extends AbstractService<Client, Contract>
 	}
 
 	@Override
+	public void bind(final Contract object) {
+		assert object != null;
+
+		int projectId;
+		Project project;
+
+		projectId = super.getRequest().getData("project", int.class);
+		project = this.repository.findOneProjectById(projectId);
+
+		super.bind(object, "code", "instantiationMoment", "providerName", "customerName", "goals", "budget");
+		object.setProject(project);
+	}
+
+	@Override
+	public void validate(final Contract object) {
+		assert object != null;
+
+		//TODO The budget must be less than or equal to the corresponding project cost
+		if (!super.getBuffer().getErrors().hasErrors("code")) {
+			Contract existing;
+
+			existing = this.repository.findOneContractByCode(object.getCode());
+			super.state(existing == null || existing.equals(object), "code", "client.contract.form.error.duplicated");
+		}
+
+	}
+
+	@Override
+	public void perform(final Contract object) {
+		assert object != null;
+
+		this.repository.save(object);
+	}
+
+	@Override
 	public void unbind(final Contract object) {
 		assert object != null;
 
-		int contractId;
 		Collection<Project> projects;
 		SelectChoices choices;
 		Dataset dataset;
 
-		if (!object.isDraftMode())
-			projects = this.repository.findAllProjects();
-		else {
-			contractId = super.getRequest().getData("id", int.class);
-			projects = this.repository.findManyProjectsByContractId(contractId);
-		}
-
+		projects = this.repository.findAllProjects();
 		choices = SelectChoices.from(projects, "code", object.getProject());
 
 		dataset = super.unbind(object, "code", "instantiationMoment", "providerName", "customerName", "goals", "budget", "draftMode");
@@ -74,7 +101,6 @@ public class ClientContractShowService extends AbstractService<Client, Contract>
 		dataset.put("projects", choices);
 
 		super.getResponse().addData(dataset);
-
 	}
 
 }

@@ -34,3 +34,19 @@ client.contract.form.label.providerName = Provider name:
 client.contract.form.label.customerName =  Customer name:
 client.contract.form.label.goals = Goals: 
 client.contract.form.label.budget = Budget: 
+
+#Form buttons ##########################################################
+
+client.contract.form.button.progress-logs = Progress Logs
+client.contract.form.button.update = Update
+client.contract.form.button.delete = Delete
+client.contract.form.button.publish = Publish
+client.contract.form.button.create = Create
+
+#Form placeholders ##########################################################
+
+client.contract.form.placeholder.code = [A-Z]{1,3}-[0-9]{3}
+
+#Form errors ##########################################################
+
+client.contract.form.error.duplicated = This code is taken
