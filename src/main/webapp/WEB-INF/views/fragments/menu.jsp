@@ -44,6 +44,10 @@
 			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="http://www.example.com/"/>
 		</acme:menu-option>
 		
+		<acme:menu-option code="master.menu.client" access="hasRole('Client')">			
+			<acme:menu-suboption code="master.menu.client.my-contracts" action="/client/contract/list-mine"/>		
+		</acme:menu-option>
+		
 		<acme:menu-option code="master.menu.sponsor" access="hasRole('Sponsor')">			
 			<acme:menu-suboption code="master.menu.sponsor.my-sponsorships" action="/sponsor/sponsorship/list"/>		
 		</acme:menu-option>

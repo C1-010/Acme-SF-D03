@@ -44,6 +44,11 @@ master.menu.provider.favourite-link = Favourite link
 master.menu.consumer = Consumer
 master.menu.consumer.favourite-link = Favourite link
 
+# master.menu.client ##########################################################
+
+master.menu.client = Client
+master.menu.client.my-contracts = List my contracts
+
 # master.menu.sponsor ##########################################################
 
 master.menu.sponsor = Sponsor
