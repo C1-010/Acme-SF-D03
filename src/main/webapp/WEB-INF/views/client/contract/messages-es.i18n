@@ -27,7 +27,7 @@ client.contract.list.button.create = Crear
 #Etiquetas de los formularios ##########################################################
 
 client.contract.form.label.code = Código:
-client.contract.form.label.project = Projecto:
+client.contract.form.label.project = Proyecto:
 client.contract.form.label.instantiationMoment = Momento de instanciación:
 client.contract.form.label.providerName = Nombre del proveedor:
 client.contract.form.label.customerName =  Nombre del cliente:
