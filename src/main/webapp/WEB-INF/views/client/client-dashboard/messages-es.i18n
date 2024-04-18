@@ -1,0 +1,27 @@
+# messages-es.i18n
+#
+# Copyright (C) 2012-2024 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+#Títulos de formularios de paneles de indicadores ##########################################################
+
+client.client-dashboard.form.title = Panel de indicadores de cliente
+
+client.client-dashboard.form.title.general-indicators = Indicadores generales
+
+#Etiquetas de formularios de paneles de indicadores ##########################################################
+
+client.client-dashboard.form.label.total-progress-logs-less-than-25: Número total de registros de progreso con una tasa de completitud inferior al 25%
+client.client-dashboard.form.label.total-progress-logs-between-25-and-50: Número total de registros de progreso con una tasa de completitud entre el 25% y el 50%
+client.client-dashboard.form.label.total-progress-logs-between-50-and-75: Número total de registros de progreso con una tasa de completitud entre el 50% y el 75%
+client.client-dashboard.form.label.total-progress-logs-above-75: Número total de registros de progreso con una tasa de completitud superior al 75%
+client.client-dashboard.form.label.average-contract-budget = Media del presupuesto de los contratos
+client.client-dashboard.form.label.minimum-contract-budget = Mínimo presupuesto de los contratos
+client.client-dashboard.form.label.maximum-contract-budget = Máximo presupuesto de los contratos
+client.client-dashboard.form.label.deviation-contract-budget =  Desviación estándar del presupuesto de los contratos
+
