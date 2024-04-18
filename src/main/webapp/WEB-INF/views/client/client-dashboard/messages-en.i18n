@@ -1,0 +1,27 @@
+# messages-en.i18n
+#
+# Copyright (C) 2012-2024 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+#Form dashboard titles ##########################################################
+
+client.client-dashboard.form.title = Client dashboard
+
+client.client-dashboard.form.title.general-indicators = General indicators
+
+#Form dashboard labels ##########################################################
+
+client.client-dashboard.form.label.total-progress-logs-less-than-25 = Total number of progress logs with a completeness rate below 25%
+client.client-dashboard.form.label.total-progress-logs-between-25-and-50 = Total number of progress logs with a completeness rate between 25% and 50%
+client.client-dashboard.form.label.total-progress-logs-between-50-and-75 = Total number of progress logs with a completeness rate between 50% and 75%
+client.client-dashboard.form.label.total-progress-logs-above-75 = Total number of progress logs with a completeness rate above 75%
+client.client-dashboard.form.label.average-contract-budget = Average contract budget 
+client.client-dashboard.form.label.minimum-contract-budget = Minimum contract budget 
+client.client-dashboard.form.label.maximum-contract-budget = Maximum contract budget
+client.client-dashboard.form.label.deviation-contract-budget = Deviation of contract budget
+
