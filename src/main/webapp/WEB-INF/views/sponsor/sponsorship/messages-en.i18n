@@ -1,0 +1,56 @@
+# messages-en.i18n
+#
+# Copyright (C) 2012-2024 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+
+#List titles ##########################################################
+
+sponsor.sponsorship.list.title= Listing of sponsorships
+sponsor.sponsorship.form.title = Sponsorship form
+
+#List labels ##########################################################
+
+sponsor.sponsorship.list.label.code = Code
+sponsor.sponsorship.list.label.startDuration = Start Duration
+sponsor.sponsorship.list.label.endDuration = End Duration
+sponsor.sponsorship.list.label.amount = Amount
+sponsor.sponsorship.list.label.type = Type
+
+#List buttons ##########################################################
+
+sponsor.sponsorship.list.button.create = Create
+
+#Form labels ##########################################################
+
+sponsor.sponsorship.form.label.code = Code:
+sponsor.sponsorship.form.label.project = Project:
+sponsor.sponsorship.form.label.moment = Instantation moment of the sponsorship:
+sponsor.sponsorship.form.label.startDuration = Start Duration of sponsorship period:
+sponsor.sponsorship.form.label.endDuration = End Duration of sponsorship period:
+sponsor.sponsorship.form.label.amount = Amount of the sponsorship:
+sponsor.sponsorship.form.label.type = Type of sponsorship:
+sponsor.sponsorship.form.label.email = Email of sponsorship:
+sponsor.sponsorship.form.label.link = Link of sponsorship:
+
+#Form buttons ##########################################################
+
+sponsor.sponsorship.form.button.invoices = Invoices
+sponsor.sponsorship.form.button.update = Update
+sponsor.sponsorship.form.button.delete = Delete
+sponsor.sponsorship.form.button.publish = Publish
+sponsor.sponsorship.form.button.create = Create
+
+#Form placeholders ##########################################################
+
+sponsor.sponsorship.form.placeholder.code = [A-Z]{1,3}-[0-9]{3}
+
+#Form errors ##########################################################
+
+sponsor.sponsorship.form.error.duplicated = This code is taken
+sponsor.sponsorship.form.error.notMinimum = Duration of the period has to be at least one month
