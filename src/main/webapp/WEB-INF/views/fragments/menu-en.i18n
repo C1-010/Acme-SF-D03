@@ -54,7 +54,7 @@ master.menu.client.dashboard = Client Dashboard
 
 master.menu.sponsor = Sponsor
 master.menu.sponsor.my-sponsorships = List my sponsorships
-
+master.menu.sponsor.dashboard = Sponsor Dashboard
 
 # master.menu.user-account ####################################################
 
