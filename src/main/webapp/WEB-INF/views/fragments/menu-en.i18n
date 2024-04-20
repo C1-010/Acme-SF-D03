@@ -28,6 +28,9 @@ master.menu.anonymous.favourite-link.Antonio-Lopez = 77862000P: López Cubiles, 
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrator
+master.menu.administrator.banner.list-all = List all banners
+master.menu.administrator.banner.list-recent = List recent banners
+master.menu.administrator.banner.create = Create banner
 master.menu.administrator.dashboard = Dashboard
 master.menu.administrator.user-accounts = User accounts
 master.menu.administrator.populate-initial = Populate DB (initial)
