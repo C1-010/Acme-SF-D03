@@ -33,3 +33,4 @@ authenticated.client.form.placeholder.identification = CLI-[0-9]{4}
 
 #Form errors ##########################################################
 
+authenticated.client.form.error.duplicated = This identification is taken

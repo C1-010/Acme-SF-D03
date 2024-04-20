@@ -6,14 +6,13 @@ import org.springframework.stereotype.Service;
 
 import acme.client.data.accounts.Authenticated;
 import acme.client.data.accounts.Principal;
-import acme.client.data.accounts.UserAccount;
 import acme.client.data.models.Dataset;
 import acme.client.helpers.PrincipalHelper;
 import acme.client.services.AbstractService;
 import acme.roles.Client;
 
 @Service
-public class AuthenticatedClientCreateService extends AbstractService<Authenticated, Client> {
+public class AuthenticatedClientUpdateService extends AbstractService<Authenticated, Client> {
 
 	// Internal state ---------------------------------------------------------
 
@@ -27,7 +26,7 @@ public class AuthenticatedClientCreateService extends AbstractService<Authentica
 	public void authorise() {
 		boolean status;
 
-		status = !this.getRequest().getPrincipal().hasRole(Client.class);
+		status = this.getRequest().getPrincipal().hasRole(Client.class);
 
 		super.getResponse().setAuthorised(status);
 	}
@@ -37,14 +36,10 @@ public class AuthenticatedClientCreateService extends AbstractService<Authentica
 		Client object;
 		Principal principal;
 		int userAccountId;
-		UserAccount userAccount;
 
 		principal = super.getRequest().getPrincipal();
 		userAccountId = principal.getAccountId();
-		userAccount = this.repository.findOneUserAccountById(userAccountId);
-
-		object = new Client();
-		object.setUserAccount(userAccount);
+		object = this.repository.findOneClientByUserAccountId(userAccountId);
 
 		super.getBuffer().addData(object);
 	}
@@ -64,7 +59,7 @@ public class AuthenticatedClientCreateService extends AbstractService<Authentica
 			Client existing;
 
 			existing = this.repository.findOneClientByIdentification(object.getIdentification());
-			super.state(existing == null, "identification", "authenticated.client.form.error.duplicated");
+			super.state(existing == null || existing.equals(object), "identification", "authenticated.client.form.error.duplicated");
 		}
 	}
 
