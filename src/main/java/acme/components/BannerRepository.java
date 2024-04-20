@@ -19,41 +19,12 @@ import acme.entities.group.Banner;
 @Repository
 public interface BannerRepository extends AbstractRepository {
 
-	@Query("select count(b) from Banner b")
-	int countBanners();
-
-	@Query("select b from Banner b")
-	List<Banner> findManyBanners(PageRequest pageRequest);
-
 	@Query("select count(b) from Banner b where b.startPeriod <= :currentDate and b.endPeriod >= :currentDate")
 	int countActiveBanners(@Param("currentDate") Date currentDate);
 
 	@Query("select b from Banner b where b.startPeriod <= :currentDate and b.endPeriod >= :currentDate")
-	List<Banner> findActiveBanners(@Param("currentDate") Date currentDate);
+	List<Banner> findManyActiveBanners(@Param("currentDate") Date currentDate, PageRequest pageRequest);
 
-	@Query("select b from Banner b where b.startPeriod <= :currentDate and b.endPeriod >= :currentDate")
-	List<Banner> findActiveBanners(@Param("currentDate") Date currentDate, PageRequest pageRequest);
-
-	default Banner findRandomBanner() {
-		Banner result;
-		int count, index;
-		PageRequest page;
-		List<Banner> list;
-
-		count = this.countBanners();
-		if (count == 0)
-			result = null;
-		else {
-			index = RandomHelper.nextInt(0, count);
-
-			page = PageRequest.of(index, 1, Sort.by(Direction.ASC, "id"));
-			list = this.findManyBanners(page);
-			result = list.isEmpty() ? null : list.get(0);
-		}
-
-		return result;
-
-	}
 	default Banner findRandomActiveBanner() {
 		Banner result;
 		int count, index;
@@ -62,14 +33,13 @@ public interface BannerRepository extends AbstractRepository {
 		Date currentDate = MomentHelper.getCurrentMoment();
 
 		count = this.countActiveBanners(currentDate);
-		System.out.println(count);
 		if (count == 0)
 			result = null;
 		else {
 			index = RandomHelper.nextInt(0, count);
 
 			page = PageRequest.of(index, 1, Sort.by(Direction.ASC, "id"));
-			list = this.findActiveBanners(currentDate, page);
+			list = this.findManyActiveBanners(currentDate, page);
 			result = list.isEmpty() ? null : list.get(0);
 		}
 
