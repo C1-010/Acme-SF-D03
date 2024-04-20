@@ -54,6 +54,6 @@ public class Banner extends AbstractEntity {
 	//Link to a target web document
 	@URL
 	@Length(max = 255)
-	private String				link;
+	private String				target;
 
 }
