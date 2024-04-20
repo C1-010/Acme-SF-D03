@@ -28,6 +28,9 @@ master.menu.anonymous.favourite-link.Antonio-Lopez = 77862000P: López Cubiles, 
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador
+master.menu.administrator.banner.list-all = Ver todos los carteles
+master.menu.administrator.banner.list-recent = Ver carteles recientes
+master.menu.administrator.banner.create = Crear cartel
 master.menu.administrator.dashboard = Panel de indicadores
 master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.populate-initial = Poblar BD (inicial)
