@@ -10,7 +10,6 @@ import acme.client.data.accounts.Administrator;
 import acme.client.data.models.Dataset;
 import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractService;
-import acme.client.views.SelectChoices;
 import acme.entities.group.Banner;
 
 @Service
@@ -69,7 +68,6 @@ public class AdministratorBannerCreateService extends AbstractService<Administra
 	public void unbind(final Banner object) {
 		assert object != null;
 
-		SelectChoices choices;
 		Dataset dataset;
 
 		dataset = super.unbind(object, "instantiationMoment", "startPeriod", "endPeriod", "picture", "slogan", "target");

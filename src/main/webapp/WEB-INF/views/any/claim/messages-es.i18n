@@ -1,0 +1,46 @@
+# messages-es.i18n
+#
+# Copyright (C) 2012-2024 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+#Títulos de las listas ##########################################################
+
+any.claim.list.title = Lista de reclamaciones publicados
+any.claim.form.title = Formulario de reclamación
+
+#Etiquetas de las listas ##########################################################
+
+any.claim.list.label.code = Código
+any.claim.list.label.heading = Título
+any.claim.list.label.department = Departamento
+
+#Botones de las listas ##########################################################
+
+
+#Etiquetas de los formularios ##########################################################
+
+any.claim.form.label.code = Código:
+any.claim.form.label.instantiationMoment = Momento de instanciación:
+any.claim.form.label.heading = Título:
+any.claim.form.label.description =  Descripción:
+any.claim.form.label.department = Departamento: 
+any.claim.form.label.email = Correo electrónico: 
+any.claim.form.label.link = Enlace:
+any.claim.form.label.confirmation = Confirme que la reclamación es correcta
+ 
+
+#Botones de los formularios ##########################################################
+
+any.claim.form.button.publish = Publicar
+
+#Placeholders de los formularios ##########################################################
+
+any.claim.form.placeholder.code = C-[0-9]{4}
+
+#Errores de los formularios ##########################################################
+any.claim.form.error.duplicated = This code is taken
