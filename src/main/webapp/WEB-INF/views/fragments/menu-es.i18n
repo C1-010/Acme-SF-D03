@@ -15,6 +15,10 @@ master.menu.sign-up = Registrarse
 master.menu.sign-in = Entrar
 master.menu.sign-out = Salir
 
+# master.menu.authenticated #######################################################
+
+master.menu.authenticated = Autentificado
+
 # master.menu.anonymous #######################################################
 
 master.menu.anonymous = Anónimo
@@ -24,6 +28,7 @@ master.menu.anonymous.favourite-link.Andres-Garcia = 20067703L: Garcia Rivero, A
 master.menu.anonymous.favourite-link.Pablo-Diaz = 20230589L: Diaz Ordoñez, Pablo
 master.menu.anonymous.favourite-link.Alejandro-Sevillano = 53933257M: Sevillano Barea, Alejandro
 master.menu.anonymous.favourite-link.Antonio-Lopez = 77862000P: López Cubiles, Antonio José
+master.menu.anonymous.all-contracts = Ver contractos
 
 # master.menu.administrator ###################################################
 
