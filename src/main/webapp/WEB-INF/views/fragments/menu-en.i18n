@@ -29,6 +29,8 @@ master.menu.anonymous.favourite-link.Pablo-Diaz = 20230589L: Diaz Ordoñez, Pabl
 master.menu.anonymous.favourite-link.Alejandro-Sevillano = 53933257M: Sevillano Barea, Alejandro
 master.menu.anonymous.favourite-link.Antonio-Lopez = 77862000P: López Cubiles, Antonio José
 master.menu.anonymous.all-contracts = List contracts 
+master.menu.anonymous.all-claims = List all claims
+master.menu.anonymous.recent-claims = List recent claims
 
 # master.menu.administrator ###################################################
 
