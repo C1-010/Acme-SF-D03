@@ -24,13 +24,19 @@
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link.Andres-Garcia" action="https://soymotor.com/"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link.Pablo-Diaz" action="https://www.astonmartinf1.com/en-GB/"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link.Alejandro-Sevillano" action="https://www.twitter.com/"/>
-			<acme:menu-suboption code="master.menu.anonymous.favourite-link.Antonio-Lopez" action="https://pokemon.alexonsager.net/"/>	
+			<acme:menu-suboption code="master.menu.anonymous.favourite-link.Antonio-Lopez" action="https://pokemon.alexonsager.net/"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.anonymous.all-contracts" action="/any/contract/list"/>
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.anonymous.all-claims" action="/any/claim/list-all"/>
+			<acme:menu-suboption code="master.menu.anonymous.recent-claims" action="/any/claim/list-recent"/>			
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
-			<acme:menu-suboption code= "master.menu.anonymous.all-contracts" action="/any/contract/list"/>		
+			<acme:menu-suboption code= "master.menu.anonymous.all-contracts" action="/any/contract/list"/>
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.anonymous.all-claims" action="/any/claim/list-all"/>
+			<acme:menu-suboption code="master.menu.anonymous.recent-claims" action="/any/claim/list-recent"/>			
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
