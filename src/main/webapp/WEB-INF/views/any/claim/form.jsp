@@ -16,7 +16,7 @@
 <%@taglib prefix="acme" uri="http://acme-framework.org/"%>
 
 <acme:form readonly="${readonly}">
-	<acme:input-textbox code="any.claim.form.label.code" path="code"/>
+	<acme:input-textbox code="any.claim.form.label.code" path="code" placeholder="any.claim.form.placeholder.code"/>
 	<acme:input-moment code="any.claim.form.label.instantiationMoment" path="instantiationMoment"/>	
 	<acme:input-textbox code="any.claim.form.label.heading" path="heading"/>
 	<acme:input-textbox code="any.claim.form.label.description" path="description"/>
