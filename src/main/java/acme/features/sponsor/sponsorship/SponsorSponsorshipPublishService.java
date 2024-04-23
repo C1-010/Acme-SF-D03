@@ -6,10 +6,12 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.client.data.datatypes.Money;
 import acme.client.data.models.Dataset;
 import acme.client.services.AbstractService;
 import acme.client.views.SelectChoices;
 import acme.entities.projects.Project;
+import acme.entities.sponsorships.Invoice;
 import acme.entities.sponsorships.Sponsorship;
 import acme.roles.Sponsor;
 
@@ -68,12 +70,29 @@ public class SponsorSponsorshipPublishService extends AbstractService<Sponsor, S
 	public void validate(final Sponsorship object) {
 		assert object != null;
 
-		//TODO the sum of the total amount of all their invoices must be equal to the amount of the sponsorship.
+		Money invoiceTotalQuantity = new Money();
+		invoiceTotalQuantity.setAmount(0.00);
+		invoiceTotalQuantity.setCurrency(object.getAmount().getCurrency());
+
+		int id;
+		id = object.getId();
+
+		Collection<Invoice> invoices = this.repository.findManyInvoicesBySponsorshipId(id);
+		for (Invoice invoice : invoices)
+			invoiceTotalQuantity.setAmount(invoiceTotalQuantity.getAmount() + invoice.totalAmount().getAmount());
+		super.state(invoiceTotalQuantity.getAmount().equals(object.getAmount().getAmount()), "*", "sponsor.sponsorship.form.error.invoice-total-amount-mismatch");
+
 		if (!super.getBuffer().getErrors().hasErrors("code")) {
 			Sponsorship existing;
 
 			existing = this.repository.findOneSponsorshipByCode(object.getCode());
 			super.state(existing == null || existing.equals(object), "code", "sponsor.sponsorship.form.error.duplicated");
+		}
+		if (!super.getBuffer().getErrors().hasErrors("invoices")) {
+			Collection<Invoice> existing;
+
+			existing = this.repository.findManyInvoicesBySponsorshipId(object.getId());
+			super.state(existing.size() > 0, "invoices", "sponsor.sponsorship.form.error.no-invoices-no-publish");
 		}
 
 	}

@@ -54,3 +54,6 @@ sponsor.sponsorship.form.placeholder.code = [A-Z]{1,3}-[0-9]{3}
 
 sponsor.sponsorship.form.error.duplicated = This code is taken
 sponsor.sponsorship.form.error.notMinimum = Duration of the period has to be at least one month
+sponsor.sponsorship.form.error.negative-amount = The amount must be positive
+sponsor.sponsorship.form.error.no-invoices-no-publish = Sponsorship without invoices can not be publish
+sponsor.sponsorship.form.error.invoice-total-amount-mismatch = The sum of the total amount of all their invoices must be equal to the amount of the sponsorship

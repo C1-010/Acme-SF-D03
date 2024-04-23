@@ -48,3 +48,5 @@ sponsor.invoice.form.placeholder.code = IN-[0-9]{4}-[0-9]{4}
 #Form errors ##########################################################
 
 sponsor.invoice.form.error.duplicated = This code is taken
+sponsor.invoice.form.error.negative-quantity = The quantity must be positive
+sponsor.invoice.form.error.negative-tax = The tax must be positive or nought

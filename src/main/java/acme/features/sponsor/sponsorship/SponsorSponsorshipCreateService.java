@@ -3,6 +3,7 @@ package acme.features.sponsor.sponsorship;
 
 import java.time.temporal.ChronoUnit;
 import java.util.Collection;
+import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -28,15 +29,7 @@ public class SponsorSponsorshipCreateService extends AbstractService<Sponsor, Sp
 
 	@Override
 	public void authorise() {
-		/*
-		 * int masterId;
-		 * boolean status;
-		 * Sponsorship sponsorship;
-		 * 
-		 * masterId = super.getRequest().getData("id", int.class);
-		 * sponsorship = this.repository.findOneSponsorshipById(masterId);
-		 * status = MomentHelper.isBefore(sponsorship.getMoment(), sponsorship.getStartDuration()) && MomentHelper.isLongEnough(sponsorship.getStartDuration(), sponsorship.getEndDuration(), 30, ChronoUnit.DAYS);
-		 */
+
 		super.getResponse().setAuthorised(true);
 	}
 
@@ -44,11 +37,15 @@ public class SponsorSponsorshipCreateService extends AbstractService<Sponsor, Sp
 	public void load() {
 		Sponsorship object = new Sponsorship();
 		Sponsor sponsor;
+		Date moment;
 
 		sponsor = this.repository.findOneSponsorById(super.getRequest().getPrincipal().getActiveRoleId());
 
+		moment = MomentHelper.getCurrentMoment();
+
 		object.setDraftMode(true);
 		object.setSponsor(sponsor);
+		object.setMoment(moment);
 
 		super.getBuffer().addData(object);
 	}
@@ -71,7 +68,6 @@ public class SponsorSponsorshipCreateService extends AbstractService<Sponsor, Sp
 	public void validate(final Sponsorship object) {
 		assert object != null;
 
-		//TODO the sum of the total amount of all their invoices must be equal to the amount of the sponsorship.
 		if (!super.getBuffer().getErrors().hasErrors("code")) {
 			Sponsorship existing;
 
@@ -80,12 +76,18 @@ public class SponsorSponsorshipCreateService extends AbstractService<Sponsor, Sp
 		}
 		if (!super.getBuffer().getErrors().hasErrors("endDuration"))
 			super.state(MomentHelper.isBefore(object.getMoment(), object.getStartDuration()) && MomentHelper.isLongEnough(object.getStartDuration(), object.getEndDuration(), 30, ChronoUnit.DAYS), "endDuration", "sponsor.sponsorship.form.error.notMinimum");
+		if (!super.getBuffer().getErrors().hasErrors("amount"))
+			super.state(object.getAmount().getAmount() > 0, "amount", "sponsor.sponsorship.form.error.negative-amount");
 
 	}
 
 	@Override
 	public void perform(final Sponsorship object) {
 		assert object != null;
+		Date moment;
+
+		moment = MomentHelper.getCurrentMoment();
+		object.setMoment(moment);
 
 		this.repository.save(object);
 	}
@@ -98,7 +100,7 @@ public class SponsorSponsorshipCreateService extends AbstractService<Sponsor, Sp
 		SelectChoices choices;
 		Dataset dataset;
 
-		projects = this.repository.findAllProjects();
+		projects = this.repository.findManyPublishedProjects();
 		choices = SelectChoices.from(projects, "code", object.getProject());
 
 		dataset = super.unbind(object, "code", "moment", "startDuration", "endDuration", "amount", "type", "email", "link", "draftMode");

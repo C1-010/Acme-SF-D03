@@ -67,6 +67,10 @@ public class SponsorInvoiceUpdateService extends AbstractService<Sponsor, Invoic
 		}
 		if (!super.getBuffer().getErrors().hasErrors("dueDate"))
 			super.state(MomentHelper.isLongEnough(object.getRegistrationTime(), object.getDueDate(), 30, ChronoUnit.DAYS), "dueDate", "sponsor.invoice.form.error.notMinimum");
+		if (!super.getBuffer().getErrors().hasErrors("quantity"))
+			super.state(object.getQuantity().getAmount() > 0, "quantity", "sponsor.invoice.form.error.negative-quantity");
+		if (!super.getBuffer().getErrors().hasErrors("tax"))
+			super.state(object.getTax() >= 0, "tax", "sponsor.invoice.form.error.negative-tax");
 
 	}
 
