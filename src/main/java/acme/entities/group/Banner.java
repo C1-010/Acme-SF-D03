@@ -1,6 +1,7 @@
 
 package acme.entities.group;
 
+import java.beans.Transient;
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -55,5 +56,26 @@ public class Banner extends AbstractEntity {
 	@URL
 	@Length(max = 255)
 	private String				target;
+
+	// Derived Attributes -------------------------------------------------------------
+
+
+	@Transient
+	public boolean isPeriodValid() {
+		// Validate that start period is before end period
+		boolean isStartPeriodBeforeEndPeriod = this.startPeriod.before(this.endPeriod);
+
+		// Validate that start period is after instantiation moment
+		boolean isStartPeriodAfterInstantiationMoment = this.startPeriod.after(this.instantiationMoment);
+
+		// Validate that duration is at least one week
+		long duration = this.endPeriod.getTime() - this.startPeriod.getTime();
+		boolean isDurationAtLeastOneWeek = duration >= 3600000 * 24 * 7; // 3600000 milliseconds = 1 hour
+
+		return isStartPeriodBeforeEndPeriod && isStartPeriodAfterInstantiationMoment && isDurationAtLeastOneWeek;
+
+		// Relationships -------------------------------------------------------------	
+
+	}
 
 }

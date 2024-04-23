@@ -1,4 +1,4 @@
-key,code-audit,start-period,end-period,mark,further-information-link,key:codeaud
+key,code,start-period,end-period,mark,further-information-link,key:codeaudit
 audit-record-01,AU-1234-567,2000/01/01 00:00,2021/08/10 09:30,A_Plus,https://www.example.com/new-feature,code-audit-01
 audit-record-02,AU-5678-901,2000/01/01 00:01,2021/08/10 09:30,A,https://www.example.com/new-feature,code-audit-02
 audit-record-03,AU-9876-543,2020/02/29 20:00,2021/08/10 09:30,B,https://www.example.com/new-feature,code-audit-03

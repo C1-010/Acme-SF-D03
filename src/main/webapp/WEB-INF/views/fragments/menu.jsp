@@ -72,6 +72,9 @@
 			<acme:menu-suboption code="master.menu.sponsor.dashboard" action="/sponsor/sponsor-dashboard/show"/>		
 		</acme:menu-option>
 		
+		<acme:menu-option code="master.menu.auditor" access="hasRole('Auditor')">			
+			<acme:menu-suboption code="master.menu.auditor.my-code-audits" action="/auditor/code-audit/list"/>
+		</acme:menu-option>
 
 	</acme:menu-left>
 	

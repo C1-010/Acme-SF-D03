@@ -66,6 +66,12 @@ master.menu.sponsor = Sponsor
 master.menu.sponsor.my-sponsorships = List my sponsorships
 master.menu.sponsor.dashboard = Sponsor Dashboard
 
+# master.menu.auditor ##########################################################
+
+master.menu.auditor = Auditor
+master.menu.auditor.my-code-audits = List my Code Audits
+master.menu.auditor.dashboard = Auditor Dashboard
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Account
