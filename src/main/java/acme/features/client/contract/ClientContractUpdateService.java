@@ -75,6 +75,8 @@ public class ClientContractUpdateService extends AbstractService<Client, Contrac
 			existing = this.repository.findOneContractByCode(object.getCode());
 			super.state(existing == null || existing.equals(object), "code", "client.contract.form.error.duplicated");
 		}
+		if (!super.getBuffer().getErrors().hasErrors("budget"))
+			super.state(object.getBudget().getAmount() > 0, "budget", "client.contract.form.error.negative-budget");
 
 	}
 
@@ -93,7 +95,7 @@ public class ClientContractUpdateService extends AbstractService<Client, Contrac
 		SelectChoices choices;
 		Dataset dataset;
 
-		projects = this.repository.findManyPublishedProjects();
+		projects = this.repository.findAllProjects();
 		choices = SelectChoices.from(projects, "code", object.getProject());
 
 		dataset = super.unbind(object, "code", "instantiationMoment", "providerName", "customerName", "goals", "budget", "draftMode");
