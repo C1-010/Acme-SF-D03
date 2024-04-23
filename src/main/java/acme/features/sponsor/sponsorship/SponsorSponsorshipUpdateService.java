@@ -71,13 +71,14 @@ public class SponsorSponsorshipUpdateService extends AbstractService<Sponsor, Sp
 	public void validate(final Sponsorship object) {
 		assert object != null;
 
-		//TODO the sum of the total amount of all their invoices must be equal to the amount of the sponsorship.
 		if (!super.getBuffer().getErrors().hasErrors("code")) {
 			Sponsorship existing;
 
 			existing = this.repository.findOneSponsorshipByCode(object.getCode());
 			super.state(existing == null || existing.equals(object), "code", "sponsor.sponsorship.form.error.duplicated");
 		}
+		if (!super.getBuffer().getErrors().hasErrors("amount"))
+			super.state(object.getAmount().getAmount() > 0, "amount", "sponsor.sponsorship.form.error.negative-amount");
 
 	}
 

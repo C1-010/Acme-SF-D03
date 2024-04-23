@@ -46,3 +46,5 @@ sponsor.invoice.form.placeholder.code = IN-[0-9]{4}-[0-9]{4}
 #Errores de los formularios ##########################################################
 
 sponsor.invoice.form.error.duplicated = This code is taken
+sponsor.invoice.form.error.negative-quantity = La cantidad debe ser positiva
+sponsor.invoice.form.error.negative-tax = TLa tasa debe ser positiva o cero

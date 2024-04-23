@@ -2,6 +2,7 @@
 package acme.features.sponsor.invoice;
 
 import java.time.temporal.ChronoUnit;
+import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -43,11 +44,16 @@ public class SponsorInvoiceCreateService extends AbstractService<Sponsor, Invoic
 		int masterId;
 		Sponsorship sponsorship;
 
+		Date currentMoment;
+
+		currentMoment = MomentHelper.getCurrentMoment();
+
 		masterId = super.getRequest().getData("masterId", int.class);
 		sponsorship = this.repository.findOneSponsorshipById(masterId);
 
 		object = new Invoice();
 		object.setSponsorship(sponsorship);
+		object.setRegistrationTime(currentMoment);
 
 		super.getBuffer().addData(object);
 	}
@@ -71,6 +77,10 @@ public class SponsorInvoiceCreateService extends AbstractService<Sponsor, Invoic
 		}
 		if (!super.getBuffer().getErrors().hasErrors("dueDate"))
 			super.state(MomentHelper.isLongEnough(object.getRegistrationTime(), object.getDueDate(), 30, ChronoUnit.DAYS), "dueDate", "sponsor.invoice.form.error.notMinimum");
+		if (!super.getBuffer().getErrors().hasErrors("quantity"))
+			super.state(object.getQuantity().getAmount() > 0, "quantity", "sponsor.invoice.form.error.negative-quantity");
+		if (!super.getBuffer().getErrors().hasErrors("tax"))
+			super.state(object.getTax() >= 0, "tax", "sponsor.invoice.form.error.negative-tax");
 
 	}
 
