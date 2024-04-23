@@ -33,7 +33,7 @@ public class AuditRecord extends AbstractEntity {
 	@Column(unique = true)
 	@Pattern(regexp = "^AU-[0-9]{4}-[0-9]{3}$", message = "{validation.auditrecords.code}")
 	@NotBlank
-	private String				codeAudit;
+	private String				code;
 
 	//at least one hour long
 	@Temporal(TemporalType.TIMESTAMP)
@@ -60,6 +60,6 @@ public class AuditRecord extends AbstractEntity {
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
-	private CodeAudit			codeaud;
+	private CodeAudit			codeaudit;
 
 }
