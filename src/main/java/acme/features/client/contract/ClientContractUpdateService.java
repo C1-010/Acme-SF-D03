@@ -93,7 +93,7 @@ public class ClientContractUpdateService extends AbstractService<Client, Contrac
 		SelectChoices choices;
 		Dataset dataset;
 
-		projects = this.repository.findAllProjects();
+		projects = this.repository.findManyPublishedProjects();
 		choices = SelectChoices.from(projects, "code", object.getProject());
 
 		dataset = super.unbind(object, "code", "instantiationMoment", "providerName", "customerName", "goals", "budget", "draftMode");

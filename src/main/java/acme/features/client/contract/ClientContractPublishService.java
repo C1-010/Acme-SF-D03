@@ -34,8 +34,11 @@ public class ClientContractPublishService extends AbstractService<Client, Contra
 		masterId = super.getRequest().getData("id", int.class);
 		contract = this.repository.findOneContractById(masterId);
 		client = contract == null ? null : contract.getClient();
-		status = contract != null && contract.isDraftMode() && super.getRequest().getPrincipal().hasRole(client);
+		//Collection<ProgressLog> progressLogs = this.repository.findManyProgressLogsByContractId(masterId);
+		//TODO A contract with no progressLogs cannot be published.
+		status = contract != null && contract.isDraftMode() && super.getRequest().getPrincipal().hasRole(client);// && !progressLogs.isEmpty();
 
+		//assert !progressLogs.isEmpty() : "You can´t publish a contract without any progress logs";
 		super.getResponse().setAuthorised(status);
 	}
 
