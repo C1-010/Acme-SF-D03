@@ -2,11 +2,13 @@
 package acme.features.client.contract;
 
 import java.util.Collection;
+import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.client.data.models.Dataset;
+import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractService;
 import acme.client.views.SelectChoices;
 import acme.entities.contracts.Contract;
@@ -33,11 +35,15 @@ public class ClientContractCreateService extends AbstractService<Client, Contrac
 	public void load() {
 		Contract object = new Contract();
 		Client client;
+		Date currentMoment;
+
+		currentMoment = MomentHelper.getCurrentMoment();
 
 		client = this.repository.findOneClientById(super.getRequest().getPrincipal().getActiveRoleId());
 
 		object.setDraftMode(true);
 		object.setClient(client);
+		object.setInstantiationMoment(currentMoment);
 
 		super.getBuffer().addData(object);
 	}
@@ -68,6 +74,10 @@ public class ClientContractCreateService extends AbstractService<Client, Contrac
 			existing = this.repository.findOneContractByCode(object.getCode());
 			super.state(existing == null, "code", "client.contract.form.error.duplicated");
 		}
+		
+		if (!super.getBuffer().getErrors().hasErrors("budget"))
+			super.state(object.getBudget().getAmount() > 0, "budget", "client.contract.form.error.negative-budget");
+
 
 	}
 
@@ -86,7 +96,7 @@ public class ClientContractCreateService extends AbstractService<Client, Contrac
 		SelectChoices choices;
 		Dataset dataset;
 
-		projects = this.repository.findAllProjects();
+		projects = this.repository.findManyPublishedProjects();
 		choices = SelectChoices.from(projects, "code", object.getProject());
 
 		dataset = super.unbind(object, "code", "instantiationMoment", "providerName", "customerName", "goals", "budget", "draftMode");

@@ -1,10 +1,13 @@
 
 package acme.features.client.progressLog;
 
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.client.data.models.Dataset;
+import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractService;
 import acme.entities.contracts.Contract;
 import acme.entities.contracts.ProgressLog;
@@ -39,12 +42,16 @@ public class ClientProgressLogCreateService extends AbstractService<Client, Prog
 		ProgressLog object;
 		int masterId;
 		Contract contract;
+		Date currentMoment;
+
+		currentMoment = MomentHelper.getCurrentMoment();
 
 		masterId = super.getRequest().getData("masterId", int.class);
 		contract = this.repository.findOneContractById(masterId);
 
 		object = new ProgressLog();
 		object.setContract(contract);
+		object.setRegistrationMoment(currentMoment);
 
 		super.getBuffer().addData(object);
 	}
