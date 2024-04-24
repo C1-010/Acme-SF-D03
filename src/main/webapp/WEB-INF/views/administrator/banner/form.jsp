@@ -16,12 +16,11 @@
 <%@taglib prefix="acme" uri="http://acme-framework.org/"%>
 
 <acme:form> 
-	<acme:input-moment code="administrator.banner.form.label.instantiationMoment" path="instantiationMoment"/>	
 	<acme:input-moment code="administrator.banner.form.label.startPeriod" path="startPeriod"/>	
 	<acme:input-moment code="administrator.banner.form.label.endPeriod" path="endPeriod"/>
-	<acme:input-textarea code="administrator.banner.form.label.picture" path="picture"/>
+	<acme:input-url code="administrator.banner.form.label.picture" path="picture"/>
 	<acme:input-textbox code="administrator.banner.form.label.slogan" path="slogan"/>
-	<acme:input-textarea code="administrator.banner.form.label.target" path="target"/>
+	<acme:input-url code="administrator.banner.form.label.target" path="target"/>
 	
 	
 

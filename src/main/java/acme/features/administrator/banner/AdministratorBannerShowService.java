@@ -50,7 +50,7 @@ public class AdministratorBannerShowService extends AbstractService<Administrato
 
 		Dataset dataset;
 
-		dataset = super.unbind(object, "instantiationMoment", "startPeriod", "endPeriod", "picture", "slogan", "target");
+		dataset = super.unbind(object, "startPeriod", "endPeriod", "picture", "slogan", "target");
 
 		super.getResponse().addData(dataset);
 	}

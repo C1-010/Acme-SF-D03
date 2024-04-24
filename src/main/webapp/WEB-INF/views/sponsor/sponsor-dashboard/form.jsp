@@ -42,7 +42,7 @@
 			<acme:message code="sponsor.sponsor-dashboard.form.label.average-sponsorships-amount"/>
 		</th>
 		<td>
-			EUR <acme:print value="${averageSponsorshipsAmount}"/> 
+			 <acme:print value="${averageSponsorshipsAmount}"/> 
 		</td>
 	</tr>
 	<tr>
@@ -50,7 +50,7 @@
 			 <acme:message code="sponsor.sponsor-dashboard.form.label.deviation-sponsorships-amount"/>
 		</th>
 		<td>
-			EUR <acme:print value="${deviationSponsorshipsAmount}"/> 
+			 <acme:print value="${deviationSponsorshipsAmount}"/> 
 		</td>
 	</tr>
 	<tr>
@@ -74,7 +74,7 @@
 			<acme:message code="sponsor.sponsor-dashboard.form.label.average-invoices-quantity"/>
 		</th>
 		<td>
-			EUR <acme:print value="${averageInvoicesQuantity}"/> 
+			 <acme:print value="${averageInvoicesQuantity}"/> 
 		</td>
 	</tr>
 	<tr>
@@ -82,7 +82,7 @@
 			<acme:message code="sponsor.sponsor-dashboard.form.label.deviation-invoices-quantity"/>
 		</th>
 		<td>
-			EUR <acme:print value="${deviationInvoicesQuantity}"/> 
+			 <acme:print value="${deviationInvoicesQuantity}"/> 
 		</td>
 	</tr>	
 	<tr>

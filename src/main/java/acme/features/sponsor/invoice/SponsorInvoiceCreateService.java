@@ -62,7 +62,7 @@ public class SponsorInvoiceCreateService extends AbstractService<Sponsor, Invoic
 	public void bind(final Invoice object) {
 		assert object != null;
 
-		super.bind(object, "code", "registrationTime", "dueDate", "quantity", "tax", "link");
+		super.bind(object, "code", "dueDate", "quantity", "tax", "link");
 	}
 
 	@Override
@@ -78,15 +78,19 @@ public class SponsorInvoiceCreateService extends AbstractService<Sponsor, Invoic
 		if (!super.getBuffer().getErrors().hasErrors("dueDate"))
 			super.state(MomentHelper.isLongEnough(object.getRegistrationTime(), object.getDueDate(), 30, ChronoUnit.DAYS), "dueDate", "sponsor.invoice.form.error.notMinimum");
 		if (!super.getBuffer().getErrors().hasErrors("quantity"))
-			super.state(object.getQuantity().getAmount() > 0, "quantity", "sponsor.invoice.form.error.negative-quantity");
+			super.state(object.getQuantity().getAmount() > 0 && object.getQuantity().getAmount() <= 1000000.00, "quantity", "sponsor.invoice.form.error.negative-quantity");
 		if (!super.getBuffer().getErrors().hasErrors("tax"))
-			super.state(object.getTax() >= 0, "tax", "sponsor.invoice.form.error.negative-tax");
+			super.state(object.getTax() >= 0 && object.getTax() <= 1.00, "tax", "sponsor.invoice.form.error.negative-tax");
 
 	}
 
 	@Override
 	public void perform(final Invoice object) {
 		assert object != null;
+		Date moment;
+
+		moment = MomentHelper.getCurrentMoment();
+		object.setRegistrationTime(moment);
 
 		this.repository.save(object);
 	}
@@ -97,7 +101,7 @@ public class SponsorInvoiceCreateService extends AbstractService<Sponsor, Invoic
 
 		Dataset dataset;
 
-		dataset = super.unbind(object, "code", "registrationTime", "dueDate", "quantity", "tax", "link");
+		dataset = super.unbind(object, "code", "dueDate", "quantity", "tax", "link");
 		dataset.put("masterId", super.getRequest().getData("masterId", int.class));
 		dataset.put("draftMode", object.getSponsorship().isDraftMode());
 

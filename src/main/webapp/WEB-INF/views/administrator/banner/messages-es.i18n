@@ -27,7 +27,6 @@ administrator.banner.list.button.create = Crear
 
 #Etiquetas de los formularios ##########################################################
 
-administrator.banner.form.label.instantiationMoment = Momento de creación del cartel:
 administrator.banner.form.label.startPeriod = Inicio del período:
 administrator.banner.form.label.endPeriod = Fin del período:
 administrator.banner.form.label.picture = Enlace a una imagen:

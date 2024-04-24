@@ -27,7 +27,6 @@ any.claim.list.button.create = Create
 #Form labels ##########################################################
 
 any.claim.form.label.code = Code:
-any.claim.form.label.instantiationMoment = Instantiation moment:
 any.claim.form.label.heading = Heading:
 any.claim.form.label.description =  Description:
 any.claim.form.label.department = Department: 

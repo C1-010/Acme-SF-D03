@@ -14,6 +14,7 @@ import acme.client.services.AbstractService;
 import acme.client.views.SelectChoices;
 import acme.entities.projects.Project;
 import acme.entities.sponsorships.Sponsorship;
+import acme.entities.sponsorships.SponsorshipType;
 import acme.roles.Sponsor;
 
 @Service
@@ -60,7 +61,7 @@ public class SponsorSponsorshipCreateService extends AbstractService<Sponsor, Sp
 		projectId = super.getRequest().getData("project", int.class);
 		project = this.repository.findOneProjectById(projectId);
 
-		super.bind(object, "code", "moment", "startDuration", "endDuration", "amount", "type", "email", "link");
+		super.bind(object, "code", "startDuration", "endDuration", "amount", "type", "email", "link");
 		object.setProject(project);
 	}
 
@@ -77,7 +78,7 @@ public class SponsorSponsorshipCreateService extends AbstractService<Sponsor, Sp
 		if (!super.getBuffer().getErrors().hasErrors("endDuration"))
 			super.state(MomentHelper.isBefore(object.getMoment(), object.getStartDuration()) && MomentHelper.isLongEnough(object.getStartDuration(), object.getEndDuration(), 30, ChronoUnit.DAYS), "endDuration", "sponsor.sponsorship.form.error.notMinimum");
 		if (!super.getBuffer().getErrors().hasErrors("amount"))
-			super.state(object.getAmount().getAmount() > 0, "amount", "sponsor.sponsorship.form.error.negative-amount");
+			super.state(object.getAmount().getAmount() > 0 && object.getAmount().getAmount() <= 1000000.00, "amount", "sponsor.sponsorship.form.error.negative-amount");
 
 	}
 
@@ -98,14 +99,17 @@ public class SponsorSponsorshipCreateService extends AbstractService<Sponsor, Sp
 
 		Collection<Project> projects;
 		SelectChoices choices;
+		SelectChoices choicesType;
 		Dataset dataset;
 
 		projects = this.repository.findManyPublishedProjects();
 		choices = SelectChoices.from(projects, "code", object.getProject());
+		choicesType = SelectChoices.from(SponsorshipType.class, object.getType());
 
-		dataset = super.unbind(object, "code", "moment", "startDuration", "endDuration", "amount", "type", "email", "link", "draftMode");
+		dataset = super.unbind(object, "code", "startDuration", "endDuration", "amount", "type", "email", "link", "draftMode");
 		dataset.put("project", choices.getSelected().getKey());
 		dataset.put("projects", choices);
+		dataset.put("types", choicesType);
 
 		super.getResponse().addData(dataset);
 	}

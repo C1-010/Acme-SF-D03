@@ -52,32 +52,42 @@ public class SponsorDashboardShowService extends AbstractService<Sponsor, Sponso
 		numberOfInvoicesWithTaxLessEqualThan21 = this.repository.numberOfInvoicesWithTaxLessEqualThan21(sponsorId);
 		numberOfSponsorshipsWithLink = this.repository.numberOfSponsorshipsWithLink(sponsorId);
 
-		averageSponsorshipsAmount = this.calculateAverage(sponsorSponsorshipsAmount);
-		minimumSponsorshipsAmount = this.calculateMin(sponsorSponsorshipsAmount);
-		maximumSponsorshipsAmount = this.calculateMax(sponsorSponsorshipsAmount);
-		deviationSponsorshipsAmount = this.calculateStandardDeviation(sponsorSponsorshipsAmount);
+		if (sponsorSponsorshipsAmount.size() > 0 && sponsorInvoicesQuantity.size() > 0 && numberOfInvoicesWithTaxLessEqualThan21 > 0 && numberOfSponsorshipsWithLink > 0) {
 
-		averageInvoicesQuantity = this.calculateAverage(sponsorInvoicesQuantity);
-		minimumInvoicesQuantity = this.calculateMin(sponsorInvoicesQuantity);
-		maximumInvoicesQuantity = this.calculateMax(sponsorInvoicesQuantity);
-		deviationInvoicesQuantity = this.calculateStandardDeviation(sponsorInvoicesQuantity);
+			averageSponsorshipsAmount = this.calculateAverage(sponsorSponsorshipsAmount);
+			minimumSponsorshipsAmount = this.calculateMin(sponsorSponsorshipsAmount);
+			maximumSponsorshipsAmount = this.calculateMax(sponsorSponsorshipsAmount);
+			deviationSponsorshipsAmount = this.calculateStandardDeviation(sponsorSponsorshipsAmount);
 
-		dashboard = new SponsorDashboard();
+			averageInvoicesQuantity = this.calculateAverage(sponsorInvoicesQuantity);
+			minimumInvoicesQuantity = this.calculateMin(sponsorInvoicesQuantity);
+			maximumInvoicesQuantity = this.calculateMax(sponsorInvoicesQuantity);
+			deviationInvoicesQuantity = this.calculateStandardDeviation(sponsorInvoicesQuantity);
 
-		dashboard.setNumberOfInvoicesWithTaxLessEqualThan21(numberOfInvoicesWithTaxLessEqualThan21);
-		dashboard.setNumberOfSponsorshipsWithLink(numberOfSponsorshipsWithLink);
+			dashboard = new SponsorDashboard();
 
-		dashboard.setAverageSponsorshipsAmount(averageSponsorshipsAmount.getAmount());
-		dashboard.setDeviationSponsorshipsAmount(deviationSponsorshipsAmount.getAmount());
-		dashboard.setMaximumSponsorshipsAmount(maximumSponsorshipsAmount);
-		dashboard.setMinimumSponsorshipsAmount(minimumSponsorshipsAmount);
+			dashboard.setNumberOfInvoicesWithTaxLessEqualThan21(numberOfInvoicesWithTaxLessEqualThan21);
+			dashboard.setNumberOfSponsorshipsWithLink(numberOfSponsorshipsWithLink);
 
-		dashboard.setAverageInvoicesQuantity(averageInvoicesQuantity.getAmount());
-		dashboard.setDeviationInvoicesQuantity(deviationInvoicesQuantity.getAmount());
-		dashboard.setMaximumInvoicesQuantity(maximumInvoicesQuantity);
-		dashboard.setMinimumInvoicesQuantity(minimumInvoicesQuantity);
+			dashboard.setAverageSponsorshipsAmount(averageSponsorshipsAmount);
+			dashboard.setDeviationSponsorshipsAmount(deviationSponsorshipsAmount);
+			dashboard.setMaximumSponsorshipsAmount(maximumSponsorshipsAmount);
+			dashboard.setMinimumSponsorshipsAmount(minimumSponsorshipsAmount);
 
-		super.getBuffer().addData(dashboard);
+			dashboard.setAverageInvoicesQuantity(averageInvoicesQuantity);
+			dashboard.setDeviationInvoicesQuantity(deviationInvoicesQuantity);
+			dashboard.setMaximumInvoicesQuantity(maximumInvoicesQuantity);
+			dashboard.setMinimumInvoicesQuantity(minimumInvoicesQuantity);
+
+			super.getBuffer().addData(dashboard);
+
+		} else {
+
+			dashboard = new SponsorDashboard();
+
+			super.getBuffer().addData(dashboard);
+
+		}
 
 	}
 
@@ -96,6 +106,8 @@ public class SponsorDashboardShowService extends AbstractService<Sponsor, Sponso
 		if (count > 0) {
 			double averageAmountInEuros = totalAmountInEuros / count;
 			averageMoney.setAmount(averageAmountInEuros);
+			averageMoney.setCurrency("EUR");
+
 		}
 
 		return averageMoney;
@@ -190,8 +202,11 @@ public class SponsorDashboardShowService extends AbstractService<Sponsor, Sponso
 				// No conversion available for the given currency
 				return money;
 			}
-			money.setCurrency("EUR");
-			money.setAmount(currentAmount);
+			Money convertedMoney = new Money();
+			convertedMoney.setAmount(currentAmount);
+			convertedMoney.setCurrency("EUR");
+
+			return convertedMoney;
 		}
 
 		return money;

@@ -2,6 +2,7 @@
 package acme.features.administrator.banner;
 
 import java.time.temporal.ChronoUnit;
+import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -10,7 +11,6 @@ import acme.client.data.accounts.Administrator;
 import acme.client.data.models.Dataset;
 import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractService;
-import acme.client.views.SelectChoices;
 import acme.entities.group.Banner;
 
 @Service
@@ -31,7 +31,14 @@ public class AdministratorBannerCreateService extends AbstractService<Administra
 
 	@Override
 	public void load() {
-		Banner object = new Banner();
+		Banner object;
+		Date moment;
+
+		moment = MomentHelper.getCurrentMoment();
+
+		object = new Banner();
+
+		object.setInstantiationMoment(moment);
 
 		super.getBuffer().addData(object);
 	}
@@ -40,17 +47,12 @@ public class AdministratorBannerCreateService extends AbstractService<Administra
 	public void bind(final Banner object) {
 		assert object != null;
 
-		super.bind(object, "instantiationMoment", "startPeriod", "endPeriod", "picture", "slogan", "target");
+		super.bind(object, "startPeriod", "endPeriod", "picture", "slogan", "target");
 	}
 
 	@Override
 	public void validate(final Banner object) {
 		assert object != null;
-
-		//boolean confirmation;
-
-		//confirmation = super.getRequest().getData("confirmation", boolean.class);
-		//super.state(confirmation, "confirmation", "javax.validation.constraints.AssertTrue.message");
 
 		if (!super.getBuffer().getErrors().hasErrors("endPeriod"))
 			super.state(MomentHelper.isBefore(object.getInstantiationMoment(), object.getStartPeriod()) && MomentHelper.isLongEnough(object.getStartPeriod(), object.getEndPeriod(), 7, ChronoUnit.DAYS), "endPeriod",
@@ -61,6 +63,10 @@ public class AdministratorBannerCreateService extends AbstractService<Administra
 	@Override
 	public void perform(final Banner object) {
 		assert object != null;
+		Date moment;
+
+		moment = MomentHelper.getCurrentMoment();
+		object.setInstantiationMoment(moment);
 
 		this.repository.save(object);
 	}
@@ -69,10 +75,9 @@ public class AdministratorBannerCreateService extends AbstractService<Administra
 	public void unbind(final Banner object) {
 		assert object != null;
 
-		SelectChoices choices;
 		Dataset dataset;
 
-		dataset = super.unbind(object, "instantiationMoment", "startPeriod", "endPeriod", "picture", "slogan", "target");
+		dataset = super.unbind(object, "startPeriod", "endPeriod", "picture", "slogan", "target");
 
 		super.getResponse().addData(dataset);
 	}
