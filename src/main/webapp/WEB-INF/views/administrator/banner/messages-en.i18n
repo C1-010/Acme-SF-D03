@@ -26,7 +26,6 @@ administrator.banner.list.button.create = Create
 
 #Form labels ##########################################################
 
-administrator.banner.form.label.instantiationMoment = Instantiation moment of the banner:
 administrator.banner.form.label.startPeriod = Start period:
 administrator.banner.form.label.endPeriod = End period:
 administrator.banner.form.label.picture = Link to a picture:

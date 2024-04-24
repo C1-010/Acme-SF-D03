@@ -28,7 +28,6 @@ sponsor.invoice.list.button.create = Create
 #Form labels ##########################################################
 
 sponsor.invoice.form.label.code = Code: 
-sponsor.invoice.form.label.registrationTime = Registration time: 
 sponsor.invoice.form.label.dueDate = Due date: 
 sponsor.invoice.form.label.quantity = Quantity: 
 sponsor.invoice.form.label.tax = Tax: 

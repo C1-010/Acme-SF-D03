@@ -27,7 +27,6 @@ sponsor.invoice.list.button.create = Crear
 #Etiquetas de los formularios ##########################################################
 
 sponsor.invoice.form.label.code = Código: 
-sponsor.invoice.form.label.registrationTime = Fecha de registro: 
 sponsor.invoice.form.label.dueDate = Fecha de vencimiento: 
 sponsor.invoice.form.label.quantity = Cantidad: 
 sponsor.invoice.form.label.tax = Tasa: 

@@ -27,7 +27,6 @@ any.claim.list.button.create = Crear
 #Etiquetas de los formularios ##########################################################
 
 any.claim.form.label.code = Código:
-any.claim.form.label.instantiationMoment = Momento de instanciación:
 any.claim.form.label.heading = Título:
 any.claim.form.label.description =  Descripción:
 any.claim.form.label.department = Departamento: 

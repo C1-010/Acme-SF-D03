@@ -30,7 +30,6 @@ sponsor.sponsorship.list.button.create = Create
 
 sponsor.sponsorship.form.label.code = Code:
 sponsor.sponsorship.form.label.project = Project:
-sponsor.sponsorship.form.label.moment = Instantation moment of the sponsorship:
 sponsor.sponsorship.form.label.startDuration = Start Duration of sponsorship period:
 sponsor.sponsorship.form.label.endDuration = End Duration of sponsorship period:
 sponsor.sponsorship.form.label.amount = Amount of the sponsorship:

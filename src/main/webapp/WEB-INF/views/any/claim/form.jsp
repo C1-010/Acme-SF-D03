@@ -17,7 +17,6 @@
 
 <acme:form readonly="${readonly}">
 	<acme:input-textbox code="any.claim.form.label.code" path="code" placeholder="any.claim.form.placeholder.code"/>
-	<acme:input-moment code="any.claim.form.label.instantiationMoment" path="instantiationMoment"/>	
 	<acme:input-textbox code="any.claim.form.label.heading" path="heading"/>
 	<acme:input-textbox code="any.claim.form.label.description" path="description"/>
 	<acme:input-textbox code="any.claim.form.label.department" path="department"/>
