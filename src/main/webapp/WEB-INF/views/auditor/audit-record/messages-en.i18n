@@ -1,0 +1,49 @@
+# messages-en.i18n
+#
+# Copyright (C) 2012-2024 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+#List titles ##########################################################
+
+auditor.audit-record.list.title= Listing of Audit Records
+auditor.audit-record.form.title = Audit Records form
+
+#List labels ##########################################################
+
+auditor.audit-record.list.label.code = Code
+auditor.audit-record.list.label.startPeriod = Start period
+auditor.audit-record.list.label.endPeriod = End period
+auditor.audit-record.list.label.mark = Mark
+
+#List buttons ##########################################################
+
+auditor.audit-record.list.button.create = Create
+
+#Form labels ##########################################################
+
+auditor.audit-record.form.label.code = Code
+auditor.audit-record.form.label.startPeriod = Start period
+auditor.audit-record.form.label.endPeriod = End period
+auditor.audit-record.form.label.mark = Mark
+auditor.audit-record.form.label.furtherInformationLink = furtherInformationLink
+
+#Form buttons ##########################################################
+
+auditor.audit-record.form.button.create = Create
+auditor.audit-record.form.button.update = Update
+auditor.audit-record.form.button.delete = Delete
+
+
+#Form placeholders ##########################################################
+
+auditor.audit-record.form.placeholder.code = AU-[0-9]{4}-[0-9]{3}   
+
+#Form errors ##########################################################
+
+auditor.audit-record.form.error.duplicated = This code is taken
+auditor.audit-record.form.error.too-close = There must be at least one hour between the beginning and the end of the period
