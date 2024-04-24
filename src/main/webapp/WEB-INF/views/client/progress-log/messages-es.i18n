@@ -28,7 +28,6 @@ client.progress-log.list.button.create = Crear
 client.progress-log.form.label.recordId = Identificación de registro: 
 client.progress-log.form.label.completeness = Completitud: 
 client.progress-log.form.label.comment = Comentarios:
-client.progress-log.form.label.registrationMoment = Momento de registro:
 client.progress-log.form.label.responsiblePerson = Persona responsable: 
 
 #Botones de los formularios ##########################################################
