@@ -22,6 +22,9 @@ public interface AnyProgressLogRepository extends AbstractRepository {
 	@Query("select pl from ProgressLog pl where pl.contract.id = :masterId")
 	Collection<ProgressLog> findManyProgressLogsByMasterId(int masterId);
 
+	@Query("select pl from ProgressLog pl where pl.contract.id = :masterId and pl.draftMode = false")
+	Collection<ProgressLog> findManyPublishedProgressLogsByMasterId(int masterId);
+
 	@Query("select pl from ProgressLog pl where pl.id = :id")
 	ProgressLog findOneProgressLogById(int id);
 

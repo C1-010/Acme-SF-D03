@@ -29,7 +29,6 @@ client.progress-log.list.button.create = Create
 client.progress-log.form.label.recordId = Record id: 
 client.progress-log.form.label.completeness = Completeness:
 client.progress-log.form.label.comment = Comment:
-client.progress-log.form.label.registrationMoment = Registration moment:
 client.progress-log.form.label.responsiblePerson = Responsible person:
 
 
@@ -38,6 +37,7 @@ client.progress-log.form.label.responsiblePerson = Responsible person:
 client.progress-log.form.button.update = Update
 client.progress-log.form.button.delete = Delete
 client.progress-log.form.button.create = Create
+client.progress-log.form.button.publish = Publish
 
 #Form placeholders ##########################################################
 
@@ -46,3 +46,4 @@ client.progress-log.form.placeholder.recordId = PG-[A-Z]{1,2}-[0-9]{4}
 #Form errors ##########################################################
 
 client.progress-log.form.error.duplicated = This recordId is taken
+client.progress-log.form.error.completeness-must-be-higher-than-last-progress-log = Completeness must be higher than the maximum current completeness

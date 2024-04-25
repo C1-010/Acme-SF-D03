@@ -16,7 +16,6 @@ client.contract.form.title = Formulario de contrato
 #Etiquetas de las listas ##########################################################
 
 client.contract.list.label.code = Código
-client.contract.list.label.instantiationMoment = Momento de instanciación
 client.contract.list.label.providerName = Nombre del proveedor
 client.contract.list.label.customerName = Nombre del cliente
 
@@ -50,3 +49,4 @@ client.contract.form.placeholder.code = [A-Z]{1,3}-[0-9]{3}
 
 client.contract.form.error.duplicated = Este código ya está cogido
 client.contract.form.error.negative-budget = El presupuesto debe ser positivo
+client.contract.form.error.limit-budget = El presupuesto debe ser cómo mucho 1.000.000

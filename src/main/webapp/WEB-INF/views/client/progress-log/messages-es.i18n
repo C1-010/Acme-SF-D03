@@ -28,7 +28,6 @@ client.progress-log.list.button.create = Crear
 client.progress-log.form.label.recordId = Identificación de registro: 
 client.progress-log.form.label.completeness = Completitud: 
 client.progress-log.form.label.comment = Comentarios:
-client.progress-log.form.label.registrationMoment = Momento de registro:
 client.progress-log.form.label.responsiblePerson = Persona responsable: 
 
 #Botones de los formularios ##########################################################
@@ -36,6 +35,7 @@ client.progress-log.form.label.responsiblePerson = Persona responsable:
 client.progress-log.form.button.update = Actualizar
 client.progress-log.form.button.delete = Borrar
 client.progress-log.form.button.create = Crear
+client.progress-log.form.button.publish = Publicar
 
 #Placeholders de los formularios ##########################################################
 
@@ -44,3 +44,4 @@ client.progress-log.form.placeholder.recordId = PG-[A-Z]{1,2}-[0-9]{4}
 #Errores de los formularios ##########################################################
 
 client.progress-log.form.error.duplicated = Este recordId ya está cogido
+client.progress-log.form.error.completeness-must-be-higher-than-last-progress-log = La completitud debe ser mayor que la completitud máxima actual.
