@@ -1,29 +1,30 @@
-key,record-id,completeness,comment,registration-moment,responsible-person,key:contract
-progress-log-01,PG-A-8090,89.00,Lorem ipsum,2014/12/11 23:00,Lorem ipsum,contract-01
-progress-log-02,PG-A-0000,89.00,Lorem ipsum,2014/12/11 23:00,Lorem ipsum,contract-02
-progress-log-03,PG-A-0001,89.00,Lorem ipsum,2014/12/11 23:00,Lorem ipsum,contract-03
-progress-log-04,PG-A-9998,89.00,Lorem ipsum,2014/12/11 23:00,Lorem ipsum,contract-01
-progress-log-05,PG-A-9999,89.00,Lorem ipsum,2014/12/11 23:00,Lorem ipsum,contract-02
-progress-log-06,PG-A-0006,0.00,Lorem ipsum,2014/12/11 23:00,Lorem ipsum,contract-03
-progress-log-07,PG-A-0007,0.01,Lorem ipsum,2014/12/11 23:00,Lorem ipsum,contract-01
-progress-log-08,PG-A-0008,99.99,Lorem ipsum,2014/12/11 23:00,Lorem ipsum,contract-02
-progress-log-09,PG-A-0009,100.00,Lorem ipsum,2014/12/11 23:00,Lorem ipsum,contract-36
-progress-log-10,PG-A-0010,89.00,L,2014/12/11 23:00,Lorem ipsum,contract-04
-progress-log-11,PG-A-0011,89.00,Lo,2014/12/11 23:00,Lorem ipsum,contract-36
-progress-log-12,PG-A-0012,89.00,लोरेम इप्सम,2014/12/11 23:00,Lorem ipsum,contract-06
-progress-log-13,PG-A-0013,89.00,Lorem ipsum sit dolor amet. Lorem ipsum sit dolor amet. Lorem ipsum sit dolor amet. Lorem ipsum sit,2014/12/11 23:00,Lorem ipsum,contract-07
-progress-log-14,PG-A-0014,89.00,Lorem ipsum sit dolor amet. Lorem ipsum sit dolor amet. Lorem ipsum sit dolor amet. Lorem ipsum sit.,2014/12/11 23:00,Lorem ipsum,contract-07
-progress-log-15,PG-A-0015,89.00,<h1>hacked</h1>,2014/12/11 23:00,Lorem ipsum,contract-07
-progress-log-16,PG-A-0016,89.00,'or 'A'='A,2014/12/11 23:00,Lorem ipsum,contract-15
-progress-log-17,PG-A-0017,89.00,Lorem ipsum,2000/01/01 00:00,Lorem ipsum,contract-27
-progress-log-18,PG-A-0018,89.00,Lorem ipsum,2000/01/01 00:01,Lorem ipsum,contract-25
-progress-log-19,PG-A-0019,89.00,Lorem ipsum,2022/07/29 23:59,Lorem ipsum,contract-23
-progress-log-20,PG-A-0020,89.00,Lorem ipsum,2022/07/30 00:00,Lorem ipsum,contract-06
-progress-log-20-1,PG-A-1020,89.00,Lorem ipsum,2020/02/29 12:00,Lorem ipsum,contract-06
-progress-log-21,PG-A-0021,89.00,Lorem ipsum,2014/12/11 23:00,L,contract-12
-progress-log-22,PG-A-0022,89.00,Lorem ipsum,2014/12/11 23:00,Lo,contract-23
-progress-log-23,PG-A-0023,89.00,Lorem ipsum,2014/12/11 23:00,लोरेम इप्सम,contract-07
-progress-log-24,PG-A-0024,89.00,Lorem ipsum,2014/12/11 23:00,Lorem ipsum sit dolor amet. Lorem ipsum sit dolor amet. Lorem ipsum sit do,contract-30
-progress-log-25,PG-A-0025,89.00,Lorem ipsum,2014/12/11 23:00,Lorem ipsum sit dolor amet. Lorem ipsum sit dolor amet. Lorem ipsum sit do.,contract-17
-progress-log-26,PG-A-0026,89.00,Lorem ipsum,2014/12/11 23:00,<h1>hacked</h1>,contract-11
-progress-log-27,PG-A-0027,89.00,Lorem ipsum,2014/12/11 23:00,'or 'A'='A,contract-14
+key,record-id,completeness,comment,registration-moment,responsible-person,draft-mode,key:contract
+progress-log-01,PG-A-8090,89.00,Lorem ipsum,2014/12/11 23:00,Lorem ipsum,true,contract-01
+progress-log-02,PG-A-0000,89.00,Lorem ipsum,2014/12/11 23:00,Lorem ipsum,true,contract-02
+progress-log-03,PG-A-0001,89.00,Lorem ipsum,2014/12/11 23:00,Lorem ipsum,true,contract-03
+progress-log-04,PG-A-9998,89.00,Lorem ipsum,2014/12/11 23:00,Lorem ipsum,true,contract-01
+progress-log-05,PG-A-9999,89.00,Lorem ipsum,2014/12/11 23:00,Lorem ipsum,true,contract-02
+progress-log-06,PG-A-0006,0.00,Lorem ipsum,2014/12/11 23:00,Lorem ipsum,true,contract-03
+progress-log-07,PG-A-0007,0.01,Lorem ipsum,2014/12/11 23:00,Lorem ipsum,true,contract-01
+progress-log-08,PG-A-0008,99.99,Lorem ipsum,2014/12/11 23:00,Lorem ipsum,true,contract-02
+progress-log-09,PG-A-0009,100.00,Lorem ipsum,2014/12/11 23:00,Lorem ipsum,true,contract-36
+progress-log-10,PG-A-0010,89.00,L,2014/12/11 23:00,Lorem ipsum,true,contract-04
+progress-log-11,PG-A-0011,89.00,Lo,2014/12/11 23:00,Lorem ipsum,true,contract-36
+progress-log-12,PG-A-0012,89.00,लोरेम इप्सम,2014/12/11 23:00,Lorem ipsum,true,contract-06
+progress-log-13,PG-A-0013,89.00,Lorem ipsum sit dolor amet. Lorem ipsum sit dolor amet. Lorem ipsum sit dolor amet. Lorem ipsum sit,2014/12/11 23:00,Lorem ipsum,true,contract-07
+progress-log-14,PG-A-0014,89.00,Lorem ipsum sit dolor amet. Lorem ipsum sit dolor amet. Lorem ipsum sit dolor amet. Lorem ipsum sit.,2014/12/11 23:00,Lorem ipsum,true,contract-07
+progress-log-15,PG-A-0015,89.00,<h1>hacked</h1>,2014/12/11 23:00,Lorem ipsum,true,contract-07
+progress-log-16,PG-A-0016,89.00,'or 'A'='A,2014/12/11 23:00,Lorem ipsum,true,contract-15
+progress-log-17,PG-A-0017,89.00,Lorem ipsum,2000/01/01 00:00,Lorem ipsum,true,contract-27
+progress-log-18,PG-A-0018,89.00,Lorem ipsum,2000/01/01 00:01,Lorem ipsum,true,contract-25
+progress-log-19,PG-A-0019,89.00,Lorem ipsum,2022/07/29 23:59,Lorem ipsum,true,contract-23
+progress-log-20,PG-A-0020,89.00,Lorem ipsum,2022/07/30 00:00,Lorem ipsum,true,contract-06
+progress-log-20-1,PG-A-1020,89.00,Lorem ipsum,2020/02/29 12:00,Lorem ipsum,true,contract-06
+progress-log-21,PG-A-0021,89.00,Lorem ipsum,2014/12/11 23:00,L,true,contract-12
+progress-log-22,PG-A-0022,89.00,Lorem ipsum,2014/12/11 23:00,Lo,true,contract-23
+progress-log-23,PG-A-0023,89.00,Lorem ipsum,2014/12/11 23:00,लोरेम इप्सम,true,contract-07
+progress-log-24,PG-A-0024,89.00,Lorem ipsum,2014/12/11 23:00,Lorem ipsum sit dolor amet. Lorem ipsum sit dolor amet. Lorem ipsum sit do,true,contract-30
+progress-log-25,PG-A-0025,89.00,Lorem ipsum,2014/12/11 23:00,Lorem ipsum sit dolor amet. Lorem ipsum sit dolor amet. Lorem ipsum sit do.,true,contract-17
+progress-log-26,PG-A-0026,89.00,Lorem ipsum,2014/12/11 23:00,<h1>hacked</h1>,true,contract-11
+progress-log-27,PG-A-0027,89.00,Lorem ipsum,2014/12/11 23:00,'or 'A'='A,true,contract-14
+progress-log-28,PG-A-0028,89.00,Lorem ipsum,2014/12/11 23:00,Lorem ipsum,false,contract-01

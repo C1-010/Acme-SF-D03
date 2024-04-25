@@ -26,10 +26,12 @@ public class ClientProgressLogUpdateService extends AbstractService<Client, Prog
 		boolean status;
 		int progressLogId;
 		Contract contract;
+		ProgressLog progressLog;
 
 		progressLogId = super.getRequest().getData("id", int.class);
 		contract = this.repository.findOneContractByProgressLogId(progressLogId);
-		status = contract != null && contract.isDraftMode() && super.getRequest().getPrincipal().hasRole(contract.getClient());
+		progressLog = this.repository.findOneProgressLogById(progressLogId);
+		status = contract != null && progressLog.isDraftMode() && super.getRequest().getPrincipal().hasRole(contract.getClient());
 
 		super.getResponse().setAuthorised(status);
 	}
@@ -62,6 +64,14 @@ public class ClientProgressLogUpdateService extends AbstractService<Client, Prog
 			existing = this.repository.findOneProgressLogByRecordId(object.getRecordId());
 			super.state(existing == null || existing.equals(object), "recordId", "client.progress-log.form.error.duplicated");
 		}
+		if (!super.getBuffer().getErrors().hasErrors("completeness")) {
+			Double maxCurrentCompleteness;
+
+			maxCurrentCompleteness = this.repository.findMaxPublishedProgressLogCompletenessByMasterId(object.getContract().getId());
+			if (maxCurrentCompleteness != null)
+				super.state(object.getCompleteness() > maxCurrentCompleteness, "completeness", "client.progress-log.form.error.completeness-must-be-higher-than-last-progress-log");
+		}
+
 	}
 
 	@Override
@@ -79,7 +89,8 @@ public class ClientProgressLogUpdateService extends AbstractService<Client, Prog
 
 		dataset = super.unbind(object, "recordId", "completeness", "comment", "registrationMoment", "responsiblePerson");
 		dataset.put("masterId", object.getContract().getId());
-		dataset.put("draftMode", object.getContract().isDraftMode());
+		dataset.put("draftMode", object.isDraftMode());
+		dataset.put("draftModeMaster", object.getContract().isDraftMode());
 
 		super.getResponse().addData(dataset);
 	}

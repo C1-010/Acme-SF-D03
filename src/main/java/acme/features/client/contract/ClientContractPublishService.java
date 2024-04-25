@@ -34,11 +34,8 @@ public class ClientContractPublishService extends AbstractService<Client, Contra
 		masterId = super.getRequest().getData("id", int.class);
 		contract = this.repository.findOneContractById(masterId);
 		client = contract == null ? null : contract.getClient();
-		//Collection<ProgressLog> progressLogs = this.repository.findManyProgressLogsByContractId(masterId);
-		//TODO A contract with no progressLogs cannot be published.
 		status = contract != null && contract.isDraftMode() && super.getRequest().getPrincipal().hasRole(client);// && !progressLogs.isEmpty();
 
-		//assert !progressLogs.isEmpty() : "You can´t publish a contract without any progress logs";
 		super.getResponse().setAuthorised(status);
 	}
 
@@ -77,6 +74,10 @@ public class ClientContractPublishService extends AbstractService<Client, Contra
 
 			existing = this.repository.findOneContractByCode(object.getCode());
 			super.state(existing == null || existing.equals(object), "code", "client.contract.form.error.duplicated");
+		}
+		if (!super.getBuffer().getErrors().hasErrors("budget")) {
+			super.state(object.getBudget().getAmount() > 0, "budget", "client.contract.form.error.negative-budget");
+			super.state(object.getBudget().getAmount() <= 1000000.00, "budget", "client.contract.form.error.limit-budget");
 		}
 
 	}
