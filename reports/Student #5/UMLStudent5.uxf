@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>608</x>
+      <y>272</y>
+      <w>352</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>bg=green
+&lt;&lt;Entity&gt;&gt;
+CodeAudit
+--
++ code: String {Unique, NotBlank,Pattern("[A-Z]{1,3}-[0-9]{3}")}
++ executionDate: Date {NotNull, Temporal(TIMESTAMP), Past}
++ type: CodeAuditType {NotNull, Pattern("(Static|Dynamic)"}
++ correctiveActions: String {NotBlank, Length(max=100)}
++ mark: Double 
++ optionalLink: String {URL}
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>208</x>
+      <y>400</y>
+      <w>352</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>bg=green
+&lt;&lt;Entity&gt;&gt;
+AuditRecord
+--
++ code: String {Unique, NotBlank,Pattern("AU-[0-9]{4}-[0-9]{3}")}
++ startPeriod: Date {Past,NotNull, Temporal(TIMESTAMP)}
++ endPeriod: Date {Past,NotNull, Temporal(TIMESTAMP)}
++ mark: Double
++ furtherInformationLink: String {URL}
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>264</y>
+      <w>360</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Role&gt;&gt;
+Auditor
+--
++ firm: String {NotBlank,Length(max=75)}
++ professionalId: String {NotBlank, Length(max=25)}
++ certifications: String {NotBlank, Length(max=100)}
++ optionalLink: String {URL}
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>224</x>
+      <y>112</y>
+      <w>320</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>bg=green
+&lt;&lt;Entity&gt;&gt;
+Project
+--
++ code: String {Unique, NotBlank,Pattern("[A-Z]{3}-[0-9]{4}")}
++ title: String {NotBlank,Size(max = 75)}
++ abstractInfo: String {NotBlank,Size(max = 100)}
++ hasFatalErrors: Boolean
++ cost: int {PositiveOrZero}
++ furtherInformationLink: String {URL,Size(max = 255)}
++ isPublished: Boolean
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>536</x>
+      <y>160</y>
+      <w>160</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>lt=x-&gt;
+m1=1..*
+m2=1
+&lt; Involved in </panel_attributes>
+    <additional_attributes>160.0;140.0;160.0;20.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>552</x>
+      <y>384</y>
+      <w>128</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-x
+m2=0..*</panel_attributes>
+    <additional_attributes>140.0;10.0;140.0;100.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>392</x>
+      <y>312</y>
+      <w>232</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-x
+m1=1
+m2=0..*
+&lt; created by</panel_attributes>
+    <additional_attributes>10.0;20.0;270.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>464</x>
+      <y>632</y>
+      <w>144</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>(startPeriod,endPeriod) = 
+at least one hour long
+bg=orange
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>352</x>
+      <y>512</y>
+      <w>184</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;210.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>864</x>
+      <y>456</y>
+      <w>280</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Form&gt;&gt;
+AuditorDashboard
+--
++ totalNumberOfCodeAuditsForStaticType: Integer
++ totalNumberOfCodeAuditsForDynamicType: Integer
++ averageNumberOfAuditRecords: Double
++ deviationNumberOfAuditRecords: Double
++ minimumNumberOfAuditRecords: Double
++ maximumNumberOfAuditRecords: Double
++ averageTimeOfThePeriodLength: Double
++ deviationTimeOfThePeriodLength: Double
++ minimumTimeOfThePeriodLength: Double
++ maximumTimeOfThePeriodLength: Double
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>856</x>
+      <y>128</y>
+      <w>160</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>mark = computed as the mode of
+the marks in the corresponding
+auditing records; 
+ties must be broken
+arbitrarily if necessary
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>800</x>
+      <y>152</y>
+      <w>72</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>70.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+</diagram>

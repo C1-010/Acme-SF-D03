@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>581</x>
+      <y>280</y>
+      <w>308</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>bg=green
+&lt;&lt;Entity&gt;&gt;
+Contract
+--
++ code: String {Unique, NotBlank,Pattern("[A-Z]{1,3}-[0-9]{3}")}
++ instantiationMoment: Date {NotNull, Temporal(TIMESTAMP), Past}
++ providerName: String {NotBlank, Length(0,75)}
++ customerName: String {NotBlank, Length(0,75)}
++ goals: String {NotBlank, Length(0,100)}
++ budget: Money {NotNull}
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>119</x>
+      <y>392</y>
+      <w>308</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>bg=green
+&lt;&lt;Entity&gt;&gt;
+ProgressLog
+--
++ recordId: String {Unique, NotBlank,Pattern("PG-[A-Z]{1,2}-[0-9]{4}")}
++ completeness: double {Range(0, 100), Digits(3, 2)}
++ comment: String {NotBlank, Length(0,100)}
++ registrationMoment: Date {NotNull, Temporal(TIMESTAMP), Past}
++ responsiblePerson: String {NotBlank, Length(0,75)}
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>112</x>
+      <y>273</y>
+      <w>315</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Role&gt;&gt;
+Client
+--
++ identification: String {Unique,NotBlank,Pattern("CLI-[0-9]{4}")}
++ companyName: String {NotBlank, Length(0,75)}
++ type: String {NotBlank, Pattern("company|individual")}
++ email: String {NotBlank, Email, Length(0,255)}
++ optionalLink: String{URL, Length(0,255)}
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>140</x>
+      <y>147</y>
+      <w>280</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>bg=green
+&lt;&lt;Entity&gt;&gt;
+Project
+--
++ code: String {Unique, NotBlank,Pattern("[A-Z]{3}-[0-9]{4}")}
++ title: String {NotBlank,Length(0,75)}
++ abstractInfo: String {NotBlank,Length(0,100)}
++ hasFatalErrors: boolean
++ cost: int {PositiveOrZero}
++ furtherInformationLink: String {URL,Length(0,255)}
++ isPublished: boolean
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>413</x>
+      <y>182</y>
+      <w>245</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=x-&gt;
+m1=1..*
+m2=1
+&lt; Involved in </panel_attributes>
+    <additional_attributes>310.0;140.0;310.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>378</y>
+      <w>224</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-x
+m2=0..*</panel_attributes>
+    <additional_attributes>300.0;10.0;300.0;100.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>315</y>
+      <w>175</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-x
+m1=1
+m2=0..*
+&lt; created by</panel_attributes>
+    <additional_attributes>10.0;20.0;230.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>847</x>
+      <y>427</y>
+      <w>126</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>Budget must be lower or 
+equal than the project cost.
+bg=green
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>812</x>
+      <y>378</y>
+      <w>49</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=..</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>679</x>
+      <y>112</y>
+      <w>245</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Form&gt;&gt;
+Dashboard
+--
++ progressLogsByCompletenessRange: List&lt;Integer&gt;
++ averageContractBudget: double
++ deviationContractBudget: double
++ minContractBudget: double
++ maxContractBudget: double
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>840</x>
+      <y>77</y>
+      <w>21</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>791</x>
+      <y>49</y>
+      <w>98</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+Serializable
+bg=white
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

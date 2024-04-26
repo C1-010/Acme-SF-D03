@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>4</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>208</x>
+      <y>340</y>
+      <w>176</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>bg=green
+&lt;&lt;Entity&gt;&gt;
+Objective
+--
++ instantiationMoment: Date {NotNull, Temporal(TIMESTAMP), Past}
++ title: String {NotBlank, Length(0,75)}
++ description: String {NotBlank, Length(0,100)}
++ priority: Priority {NotNull}
++ status: boolean 
++ startDuration: Date {NotNull, Temporal(TIMESTAMP}
++ endDuration: Date {NotNull, Temporal(TIMESTAMP}
++ optionalLink: String {URL, Length(0,255)}
++ / isDurationValid: boolean {Transient}
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>528</x>
+      <y>328</y>
+      <w>64</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+Priority
+--
++ Low
++ Medium
++ High
+bg=green
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>208</x>
+      <y>436</y>
+      <w>176</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>bg=green
+&lt;&lt;Entity&gt;&gt;
+Notice
+--
++ instantiationMoment: Date {NotNull, Temporal(TIMESTAMP), Past}
++ title: String {NotBlank, Length(max=75)}
++ author: String {NotBlank, Length(max=75)}
++ message: String {NotBlank, Length(max=100)]
++ emailAddress: String {Email}
++ link: String {URL}
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>528</x>
+      <y>372</y>
+      <w>140</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Form&gt;&gt;
+AdministratorDashboard
+--
++numberOfAuditors: Integer
++numberOfClients: Integer
++numberOfConsumer: Integer
++numberOfDevelopers: Integer
++numberOfManagers: Integer
++numberOfProviders:Integer 
++numberOfSponsors: Integer
++ratioOfNoticesWithEmailAndLink: Double
++ratioOfCriticalObjectives: Double
++ratioOfNonCriticalObjectives: Double
++averageValueInRisks: Double
++deviationValueInRisks: Double
++maximumValueInRisks: Double
++minimumValueInRisks: Double
++averageClaimsPostedLast10Weeks: Double
++deviationClaimsPostedLast10Weeks: Double
++maximumClaimsPostedLast10Weeks: Double
++minimumClaimsPostedLast10Weeks: Double
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>348</x>
+      <y>640</y>
+      <w>56</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>The Impact must
+be positive.
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>312</x>
+      <y>616</y>
+      <w>44</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0;90.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>200</x>
+      <y>544</y>
+      <w>148</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Risk
+--
++ reference: String{Unique, NotBlank,RegExp"R-[0-9]{3}"
++ identificationDate: Date{Past}
++ impact: Integer
++ probability: Integer
++ description: String {NotBlank, Length(max=101)}
++ optionalLink: String{URL}
++/ value: Integer{Transient}
+
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>228</x>
+      <y>616</y>
+      <w>32</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;100.0;60.0;100.0;60.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>156</x>
+      <y>644</y>
+      <w>76</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>value = impact * probability
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>452</x>
+      <y>544</y>
+      <w>156</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Project
+--
++ code: String {NotBlank, Unique, RegExp “[A-Z]{3}-[0-9]{4}"}
++ title: String {NotBlank, Max=75}
++ abstractInfo: String {NotBlank,Max=100}
++ hasFatalErrors: Boolean
++ cost: Double
++ furtherInformation: String{URL}
+
+
+bg=green
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>328</x>
+      <y>524</y>
+      <w>148</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=0..*</panel_attributes>
+    <additional_attributes>340.0;50.0;340.0;10.0;10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>392</x>
+      <y>520</y>
+      <w>56</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>Has impact on &gt;
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>340</y>
+      <w>176</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>bg=green
+&lt;&lt;Entity&gt;&gt;
+Banner
+--
++ instantiationMoment: Date {NotNull, Temporal(TIMESTAMP), Past}
++ startPeriod: Date {NotNull, Temporal(TIMESTAMP)}
++ endPeriod: Date {NotNull, Temporal(TIMESTAMP)}
++ picture: String {URL}
++ slogan: String {NotBlank, Length(max=75}
++ link: String {URL}
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>344</x>
+      <y>300</y>
+      <w>68</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>StartDuration must be
+before endDuration
+bg=green
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>316</x>
+      <y>316</y>
+      <w>36</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=..</panel_attributes>
+    <additional_attributes>10.0;60.0;70.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>256</x>
+      <y>300</y>
+      <w>68</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>StartDuration must be
+after instantiationMoment
+bg=green
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>276</x>
+      <y>316</y>
+      <w>12</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=..</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>160</x>
+      <y>300</y>
+      <w>68</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>The duration must be at
+least one hour
+bg=green
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>224</x>
+      <y>316</y>
+      <w>32</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=..</panel_attributes>
+    <additional_attributes>60.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>432</y>
+      <w>176</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>bg=green
+&lt;&lt;Entity&gt;&gt;
+Claim
+--
++ code: String {NotBlank, Unique, Pattern("^C-[0-9]{4}$")}
++ instantiationMoment: Date {NotNull, Temporal(TIMESTAMP), Past}
++ startPeriod: Date {NotNull, Temporal(TIMESTAMP)}
++ heading: String {NotBlank, Lenngth(max=75)}
++ description: String {NotBlank, Lenngth(max=100)}
++ department: String {NotBlank, Lenngth(max=100)}
++ email: String {Email, Length(max=255)}
++ link: String {URL, Length(max=255)}
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
